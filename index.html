@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Poppy</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    .logo-wrapper {
+      position: relative;
+      border: 2px solid red;
+      padding: 1em 2em;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: clamp(1rem, 4vw, 1.5rem); /* Responsive font size */
+      color: white;
+      max-width: 90vw;
+      width: fit-content;
+      box-sizing: border-box;
+    }
+
+    .logo-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background-color: red;
+      z-index: 0;
+      animation: fillBar 5s forwards;
+    }
+
+    .logo-text {
+      position: relative;
+      z-index: 1;
+      white-space: nowrap;
+    }
+
+    @keyframes fillBar {
+      to {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-wrapper">
+    <div class="logo-fill"></div>
+    <div class="logo-text">POPMART</div>
+  </div>
+</body>
+</html>
