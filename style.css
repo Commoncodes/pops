@@ -182,6 +182,21 @@ body {
     display: none;
   }
 
+  .top-nav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px 20px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 8px;
+}
+
   .container {
     flex-direction: column;
     padding: 10px;
