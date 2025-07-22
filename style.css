@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #fff;
+  color: #222;
+  padding-left: 3rem;
+  padding-right: 3rem;
+    padding-top: 120px; /* Adjust to match your navbar height */
+
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  background: white;
+  padding-top: 1rem;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+
+.search-bar {
+  
+  margin: 0 20px;
+  width: 200px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.icons span {
+  margin-left: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Top Navigation */
+.top-nav {
+    position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  gap: 15px;
+    justify-content: center;
+  padding: 10px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+}
+
+.sidebar h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.sidebar label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Product Grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  flex: 1;
+}
+
+.product {
+  position: relative;
+  border: 1px solid #eee;
+  padding: 10px;
+  height: 300px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #222;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
