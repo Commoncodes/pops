@@ -58,5 +58,16 @@
     <div class="logo-fill"></div>
     <div class="logo-text">POPMART</div>
   </div>
+    <script>
+  // Wait for the DOM to load
+  document.addEventListener("DOMContentLoaded", function() {
+    const fill = document.querySelector('.logo-fill');
+    // Listen for the end of the animation
+    fill.addEventListener('animationend', function() {
+      window.location.href = "shop.html";
+    });
+  });
+</script>
+<!-- ...existing code... -->
 </body>
 </html>
