@@ -161,8 +161,8 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   body {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     padding-top: 80px;
   }
 
@@ -193,6 +193,22 @@ body {
 
   .products {
     grid-template-columns: repeat(2, 1fr);
+
     gap: 16px;
+  }
+
+  .info {
+    height: 180px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .info img{
+    width: 150px;
+    height: 140px;
   }
 }
