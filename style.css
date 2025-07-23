@@ -91,6 +91,8 @@ body {
   font-size: 14px;
 }
 
+
+
 /* Layout */
 .container {
   display: flex;
@@ -120,6 +122,11 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 20px;
   flex: 1;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .product {
@@ -152,7 +159,7 @@ body {
 
 .info {
      background-color: #f2f2f2;
-    border-radius: 10px;
+    border-radius: 4px;
   margin-top: 12px;
   text-align: left;
   font-size: 12px;
@@ -197,6 +204,87 @@ body {
   border-radius: 2px;
   text-transform: uppercase;
 }
+
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto 32px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: none;
+  object-fit: cover;
+  height: 220px;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carousel-btn.prev {
+  left: 16px;
+}
+
+.carousel-btn.next {
+  right: 16px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dots .dot {
+  width: 20px;
+  height: 3px;
+  background: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background: #ff4444;
+}
+
+/* Responsive */
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -295,7 +383,7 @@ body {
   .info {
     height: 230px;
     background-color: #f2f2f2;
-    border-radius: 10px;
+    border-radius: 2px;
     display: flex;
     align-items: center;
     padding: 0.5rem;
@@ -310,5 +398,38 @@ body {
   }
 
 
+    .carousel {
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-slide {
+      height: 100%;
+  }
 
+  .carousel-track img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+
+}
+
+
+/****** Mobile Styles ******/
+
+.folly{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.body-home {
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  color: #222;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-top: 80px; /* to accommodate fixed navbar */
 }
