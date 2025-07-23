@@ -54,7 +54,7 @@ body {
   gap: 15px;
   justify-content: center;
   padding: 10px 20px;
-  background: #f9f9f9;
+  background: #ffffff;
   border-bottom: 1px solid #ddd;
 }
 
@@ -124,10 +124,23 @@ body {
 }
 
 .info {
+     background-color: #f2f2f2;
+    border-radius: 10px;
   margin-top: 12px;
   text-align: left;
   font-size: 12px;
+   display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+ .info img{
+    width: 140px;
+    height: 160px;
+    margin-top: 1rem;
+  }
 
 .info .brand {
   font-weight: bold;
