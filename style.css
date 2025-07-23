@@ -205,6 +205,15 @@ body {
   text-transform: uppercase;
 }
 
+.new-arrivals {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ font-size: 1.5rem;
+ align-items: center;
+ justify-content: center;
+}
+
 
 /* Carousel Styles */
 .carousel {
@@ -351,6 +360,16 @@ body {
     display: block;
     order: 1;
   }
+
+
+  .new-arrivals {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ font-size: 0.9rem;
+ align-items: start;
+ justify-content: center;
+}
 
   .top-nav {
   display: flex;
