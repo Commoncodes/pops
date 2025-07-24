@@ -789,7 +789,7 @@ color: #fff;
     padding: 0 0.5rem;
   }
   .new-arrivals-img {
-    min-width: calc((100% - 12px) / 2); /* 2 items with 12px gap */
+    min-width: calc((100% - 50px) / 2); /* 2 items with 12px gap */
     height: 400px;
     display: flex;
     transform: translateY(-25%);
