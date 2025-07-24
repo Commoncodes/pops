@@ -790,13 +790,16 @@ color: #fff;
   }
   .new-arrivals-img {
     min-width: calc((100% - 12px) / 2); /* 2 items with 12px gap */
-    height: 260px;
+    height: 400px;
+    display: flex;
+    transform: translateY(-25%);
   }
 
   .pop-now-grid{
     display: flex;
     flex-direction: column;
   }
+ 
 
 
 
@@ -825,11 +828,11 @@ color: #fff;
 }
 
 .new-arrivals h1{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .new-arrivals p{
-    font-size: 0.9rem;
+    font-size: 0.6rem;
 }
 
 
@@ -1079,6 +1082,10 @@ color: #fff;
     padding: 0.3rem;
     border-radius: 100%;
     background-color: #00000025;
+}
+
+.pop-now-section{
+    transform: translatey(-20%);
 }
 
 }
