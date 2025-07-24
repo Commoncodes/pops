@@ -168,7 +168,7 @@
     <div class="pop-now-text">
          <p class="brand">CRYBABY x <br> Powerpuff Girls</p>
          <p class="price">$27.99/PICK</p>   
-           <button>
+           <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
@@ -178,7 +178,7 @@
         <div class="pop-now-text">
          <p class="brand">PUCKY Roly-Poly <br> Kitty Series</p>
          <p class="price">$27.99/PICK</p>   
-           <button>
+           <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
@@ -189,7 +189,7 @@
         <div class="pop-now-text">
          <p class="brand">DIMOO WORLD x <br> DISNEY Series-Vinyl</p>
          <p class="price">$27.99/PICK</p>   
-         <button>
+         <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
@@ -201,7 +201,7 @@
     <div class="pop-now-text">
          <p class="brand">CRYBABY x <br> Powerpuff Girls</p>
          <p class="price">$27.99/PICK</p>   
-           <button>
+          <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
@@ -211,7 +211,7 @@
         <div class="pop-now-text">
          <p class="brand">PUCKY Roly-Poly <br> Kitty Series</p>
          <p class="price">$27.99/PICK</p>   
-           <button>
+           <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
@@ -222,7 +222,7 @@
         <div class="pop-now-text">
          <p class="brand">DIMOO WORLD x <br> DISNEY Series-Vinyl</p>
          <p class="price">$27.99/PICK</p>   
-         <button>
+         <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
@@ -234,7 +234,7 @@
     <div class="pop-now-text">
          <p class="brand">CRYBABY x <br> Powerpuff Girls</p>
          <p class="price">$27.99/PICK</p>   
-           <button>
+           <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
@@ -244,7 +244,7 @@
         <div class="pop-now-text">
          <p class="brand">PUCKY Roly-Poly <br> Kitty Series</p>
          <p class="price">$27.99/PICK</p>   
-           <button>
+            <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
@@ -254,10 +254,13 @@
         <img src="images/popbox3.webp" alt="Slide 1" class="pop-now-image">
         <div class="pop-now-text">
          <p class="brand">DIMOO WORLD x <br> DISNEY Series-Vinyl</p>
-         <p class="price">$27.99/PICK</p>   
-         <button>
+         <p class="price">$27.99/PICK</p>  
+         
+           <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
+       
+         
       </div>
 
    </div>
@@ -273,12 +276,15 @@
 
 
    <div class="hot-product-grid">
-       <div class="hot-product-">
+       <div class="hot-product-first">
         <h1>
            Hot <br> Products...
         </h1>
       <div class="hotty">
-         <p class="brand">VIEW MORE ></p>
+        <a href="shop.html" style="color: #fff; ">
+            <p class="brand">VIEW MORE ></p>
+        </a>
+         
          <div class="hot-carousel-btns">
             <div class="prev-btn">
                 &#10094;
@@ -288,6 +294,10 @@
             </div>
          </div>
       </div>
+      </div>
+
+      <div class="hot-product-scroll">
+        
       </div>
       <div class="hot-product-img">
         <div class="image-wrapper">
@@ -314,6 +324,45 @@
 
    </div>
    <div class="hot-product-img">
+        <div class="image-wrapper">
+             <img src="images/hot-products3.jpg" alt="Slide 1" class="hot-product-image">
+
+        </div>
+        <div class="hot-product-text">
+          <p class="brand">SKULLPANDA</p>
+         <p class="brand">0SKULLPANDA - Have a seat</p>
+         <p class="price">$27.99</p>   
+      </div>
+
+   </div>
+
+      <div class="hot-product-img">
+        <div class="image-wrapper">
+             <img src="images/hot-products3.jpg" alt="Slide 1" class="hot-product-image">
+
+        </div>
+        <div class="hot-product-text">
+          <p class="brand">SKULLPANDA</p>
+         <p class="brand">0SKULLPANDA - Have a seat</p>
+         <p class="price">$27.99</p>   
+      </div>
+
+   </div>
+
+      <div class="hot-product-img">
+        <div class="image-wrapper">
+             <img src="images/hot-products3.jpg" alt="Slide 1" class="hot-product-image">
+
+        </div>
+        <div class="hot-product-text">
+          <p class="brand">SKULLPANDA</p>
+         <p class="brand">0SKULLPANDA - Have a seat</p>
+         <p class="price">$27.99</p>   
+      </div>
+
+   </div>
+
+      <div class="hot-product-img">
         <div class="image-wrapper">
              <img src="images/hot-products3.jpg" alt="Slide 1" class="hot-product-image">
 
@@ -680,6 +729,75 @@ popNowGrid.addEventListener('touchmove', (e) => {
   const x = e.touches[0].pageX - popNowGrid.offsetLeft;
   const walk = (x - startXPop) * 1.5;
   popNowGrid.scrollLeft = scrollLeftPop - walk;
+});
+</script>
+<script>
+const hotProductGrid = document.querySelector('.hot-product-grid');
+const hotProductImgs = document.querySelectorAll('.hot-product-img');
+const hotPrevBtn = document.querySelector('.hot-carousel-btns .prev-btn');
+const hotNextBtn = document.querySelector('.hot-carousel-btns .next-btn');
+let hotCurrentIndex = 0;
+const hotVisibleCount = window.innerWidth <= 768 ? 2 : 4;
+
+function scrollHotProduct(index) {
+  const itemWidth = hotProductImgs[0].offsetWidth + parseInt(getComputedStyle(hotProductGrid).gap) || 20;
+  hotProductGrid.scrollTo({
+    left: index * itemWidth,
+    behavior: 'smooth'
+  });
+}
+
+hotNextBtn.onclick = function() {
+  if (hotCurrentIndex < hotProductImgs.length - hotVisibleCount) {
+    hotCurrentIndex++;
+    scrollHotProduct(hotCurrentIndex);
+  }
+};
+hotPrevBtn.onclick = function() {
+  if (hotCurrentIndex > 0) {
+    hotCurrentIndex--;
+    scrollHotProduct(hotCurrentIndex);
+  }
+};
+
+// Drag/Swipe support
+let isDownHot = false;
+let startXHot;
+let scrollLeftHot;
+
+hotProductGrid.addEventListener('mousedown', (e) => {
+  isDownHot = true;
+  startXHot = e.pageX - hotProductGrid.offsetLeft;
+  scrollLeftHot = hotProductGrid.scrollLeft;
+});
+hotProductGrid.addEventListener('mouseleave', () => {
+  isDownHot = false;
+});
+hotProductGrid.addEventListener('mouseup', () => {
+  isDownHot = false;
+});
+hotProductGrid.addEventListener('mousemove', (e) => {
+  if (!isDownHot) return;
+  e.preventDefault();
+  const x = e.pageX - hotProductGrid.offsetLeft;
+  const walk = (x - startXHot) * 1.5;
+  hotProductGrid.scrollLeft = scrollLeftHot - walk;
+});
+
+// Touch support
+hotProductGrid.addEventListener('touchstart', (e) => {
+  isDownHot = true;
+  startXHot = e.touches[0].pageX - hotProductGrid.offsetLeft;
+  scrollLeftHot = hotProductGrid.scrollLeft;
+});
+hotProductGrid.addEventListener('touchend', () => {
+  isDownHot = false;
+});
+hotProductGrid.addEventListener('touchmove', (e) => {
+  if (!isDownHot) return;
+  const x = e.touches[0].pageX - hotProductGrid.offsetLeft;
+  const walk = (x - startXHot) * 1.5;
+  hotProductGrid.scrollLeft = scrollLeftHot - walk;
 });
 </script>
 </body>
