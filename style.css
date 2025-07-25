@@ -1267,4 +1267,25 @@ color: #fff;
 }
 
 
+.our-artist-section{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+
+.artist-card{
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  height: auto;
+  width: 100%;
+  color: #fff;
+  padding: 2rem;
+  
+  gap: 20px;
+}
 }
