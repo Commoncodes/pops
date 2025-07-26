@@ -44,7 +44,7 @@
 
    <main class="container-home">
   <!-- Carousel Slider Start -->
-  <section class="carousel">
+  <section class="carousel desktop-carousel">
     <div class="carousel-track">
       <img src="images/plush.webp" alt="Slide 1" class="carousel-slide active">
       <img src="images/plush2.webp" alt="Slide 2" class="carousel-slide">
@@ -61,6 +61,27 @@
     </div>
   </section>
   <!-- Carousel Slider End -->
+
+<!-- Mobile Carousel (visible only on mobile) -->
+<section class="carousel mobile-carousel">
+  <div class="carousel-track">
+    <img src="images/plush-mob.jpeg" alt="Mobile Slide 1" class="carousel-slide active">
+    <img src="images/plush-mob2.jpeg" alt="Mobile Slide 2" class="carousel-slide">
+    <img src="images/plush-mob3.jpeg" alt="Mobile Slide 3" class="carousel-slide">
+  </div>
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+
+
+  
 
   <div class="new-arrivals">
     <h1>
@@ -455,8 +476,14 @@
         </div>
 
 
-        <div class="wonder-img">
+        <div class="wonder-img w-desktop">
             <img src="images/popbanner.webp" alt="Wonder Image">
+            
+        </div>
+
+        
+        <div class="wonder-img w-mobile">
+            <img src="images/popbanner-mob.jpeg" alt="Wonder Image">
             
         </div>
 
@@ -622,7 +649,7 @@
   </main>
 
   <div class="footer">
-    
+
   </div>
 
   <nav class="bottom-nav">
@@ -633,37 +660,78 @@
 </nav>
 
 <script>
-const slides = document.querySelectorAll('.carousel-slide');
-const dots = document.querySelectorAll('.carousel-dots .dot');
-let currentSlide = 0;
+// Desktop Carousel
+(function() {
+  const desktopCarousel = document.querySelector('.desktop-carousel');
+  if (!desktopCarousel) return;
+  const slides = desktopCarousel.querySelectorAll('.carousel-slide');
+  const dots = desktopCarousel.querySelectorAll('.carousel-dots .dot');
+  const nextBtn = desktopCarousel.querySelector('.carousel-btn.next');
+  const prevBtn = desktopCarousel.querySelector('.carousel-btn.prev');
+  let currentSlide = 0;
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-    dots[i].classList.toggle('active', i === index);
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    currentSlide = index;
+  }
+
+  nextBtn.onclick = function() {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  };
+  prevBtn.onclick = function() {
+    let prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  };
+  dots.forEach((dot, i) => {
+    dot.onclick = () => showSlide(i);
   });
-  currentSlide = index;
-}
 
-document.querySelector('.carousel-btn.next').onclick = function() {
-  let next = (currentSlide + 1) % slides.length;
-  showSlide(next);
-};
-document.querySelector('.carousel-btn.prev').onclick = function() {
-  let prev = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(prev);
-};
-dots.forEach((dot, i) => {
-  dot.onclick = () => showSlide(i);
-});
+  setInterval(() => {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }, 4000);
+})();
 
-// Optional: Auto-slide every 4 seconds
-setInterval(() => {
-  let next = (currentSlide + 1) % slides.length;
-  showSlide(next);
-}, 4000);
+// Mobile Carousel
+(function() {
+  const mobileCarousel = document.querySelector('.mobile-carousel');
+  if (!mobileCarousel) return;
+  const slides = mobileCarousel.querySelectorAll('.carousel-slide');
+  const dots = mobileCarousel.querySelectorAll('.carousel-dots .dot');
+  const nextBtn = mobileCarousel.querySelector('.carousel-btn.next');
+  const prevBtn = mobileCarousel.querySelector('.carousel-btn.prev');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    currentSlide = index;
+  }
+
+  nextBtn.onclick = function() {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  };
+  prevBtn.onclick = function() {
+    let prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  };
+  dots.forEach((dot, i) => {
+    dot.onclick = () => showSlide(i);
+  });
+
+  setInterval(() => {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }, 4000);
+})();
 </script>
-
 <script>
 const arrivalsGrid = document.querySelector('.new-arrivals-grid');
 const arrivalsImgs = document.querySelectorAll('.new-arrivals-img');
