@@ -812,6 +812,7 @@ background-color: #f2f2f2;
     margin-top: 0rem;
     width: 100%;
     padding: 1rem;
+    display: block;
   }
 
   .search-input{
