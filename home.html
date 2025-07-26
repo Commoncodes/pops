@@ -501,7 +501,12 @@
       </div>
     </div>
 
-    <div class="our-artist-section">
+
+    <div class="our-artist-carousel-wrapper">
+        <button class="artist-btn prev-btn">&#10094;</button>
+
+        <div class="our-artist-section">
+
 
       <div class="artist-card">
         <div class="artist-pic">
@@ -531,7 +536,30 @@
           </p>
         </div>
       </div>
+
+
+        <div class="artist-card">
+        <div class="artist-pic">
+          <img src="images/kenny.webp" alt="">
+        </div>
+        <div class="artist-info">
+          <h1>
+            Kenny Wong
+          </h1>
+          <p>
+            Kenny founded Pop Mart in 2010, driven by a passion for art and design. With a background in industrial design, he has transformed the company into a global leader in collectible art toys. His vision is to create a platform that connects artists with fans worldwide, making art accessible and fun.
+          </p>
+        </div>
+      </div>
+    
     </div>
+
+      <button class="artist-btn next-btn">&#10095;</button>
+
+
+    </div>
+
+  
 
 
 
@@ -956,6 +984,75 @@ hotProductGrid.addEventListener('touchmove', (e) => {
   const x = e.touches[0].pageX - hotProductGrid.offsetLeft;
   const walk = (x - startXHot) * 1.5;
   hotProductGrid.scrollLeft = scrollLeftHot - walk;
+});
+</script>
+<script>
+const artistGrid = document.querySelector('.our-artist-section');
+const artistCards = document.querySelectorAll('.artist-card');
+const artistPrevBtn = document.querySelector('.artist-btn.prev-btn');
+const artistNextBtn = document.querySelector('.artist-btn.next-btn');
+let artistCurrentIndex = 0;
+const artistVisibleCount = window.innerWidth <= 768 ? 1 : 2;
+
+function scrollArtist(index) {
+  const itemWidth = artistCards[0].offsetWidth + parseInt(getComputedStyle(artistGrid).gap) || 30;
+  artistGrid.scrollTo({
+    left: index * itemWidth,
+    behavior: 'smooth'
+  });
+}
+
+artistNextBtn.onclick = function() {
+  if (artistCurrentIndex < artistCards.length - artistVisibleCount) {
+    artistCurrentIndex++;
+    scrollArtist(artistCurrentIndex);
+  }
+};
+artistPrevBtn.onclick = function() {
+  if (artistCurrentIndex > 0) {
+    artistCurrentIndex--;
+    scrollArtist(artistCurrentIndex);
+  }
+};
+
+// Drag/Swipe support
+let isDownArtist = false;
+let startXArtist;
+let scrollLeftArtist;
+
+artistGrid.addEventListener('mousedown', (e) => {
+  isDownArtist = true;
+  startXArtist = e.pageX - artistGrid.offsetLeft;
+  scrollLeftArtist = artistGrid.scrollLeft;
+});
+artistGrid.addEventListener('mouseleave', () => {
+  isDownArtist = false;
+});
+artistGrid.addEventListener('mouseup', () => {
+  isDownArtist = false;
+});
+artistGrid.addEventListener('mousemove', (e) => {
+  if (!isDownArtist) return;
+  e.preventDefault();
+  const x = e.pageX - artistGrid.offsetLeft;
+  const walk = (x - startXArtist) * 1.5;
+  artistGrid.scrollLeft = scrollLeftArtist - walk;
+});
+
+// Touch support
+artistGrid.addEventListener('touchstart', (e) => {
+  isDownArtist = true;
+  startXArtist = e.touches[0].pageX - artistGrid.offsetLeft;
+  scrollLeftArtist = artistGrid.scrollLeft;
+});
+artistGrid.addEventListener('touchend', () => {
+  isDownArtist = false;
+});
+artistGrid.addEventListener('touchmove', (e) => {
+  if (!isDownArtist) return;
+  const x = e.touches[0].pageX - artistGrid.offsetLeft;
+  const walk = (x - startXArtist) * 1.5;
+  artistGrid.scrollLeft = scrollLeftArtist - walk;
 });
 </script>
 </body>
