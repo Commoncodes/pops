@@ -249,6 +249,14 @@ body {
   padding-top: 80px; /* to accommodate fixed navbar */
 }
 
+
+.desktop-carousel {
+  display: block;
+}
+.mobile-carousel {
+  display: none;
+}
+
 .container-main-home {
   display: flex;
   padding: 0px;
@@ -673,6 +681,10 @@ color: #fff;
     margin-bottom: 4rem;
 }
 
+.w-mobile{
+  display: none;
+}
+
 .wonder-img img{
     width: 100vw;
         object-fit: cover;
@@ -845,6 +857,14 @@ background-color: #f2f2f2;
   }
 
 
+    .desktop-carousel {
+    display: none;
+  }
+  .mobile-carousel {
+    display: block;
+  }
+
+
     .carousel {
     max-width: 100%;
     height: auto;
@@ -855,7 +875,7 @@ background-color: #f2f2f2;
 
   .carousel-track img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -1260,6 +1280,12 @@ color: #fff;
     object-fit: cover;
 
 }
+
+
+.w-desktop{
+  display: none;
+}
+
 
 .container22{
   margin-left: 1rem;
