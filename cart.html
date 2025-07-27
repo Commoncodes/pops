@@ -58,35 +58,33 @@
 
 
     <div id="cart-items">
-         <div class="cart-img" >
-              <img src="" id="cart-img">
-        </div>
-        <div class="cart-description">
-          <h2 class="name"></h2>
-          <p class="price"></p>
+        <div class="items">
+            <img src="cart-img" alt="">
+            <h4></h4>
+            <p></p>
 
-         
-    </div>
-
-
-    </div>
-
-    <div class="cart-box-main">
-       
-    <section class="section2">
-         <p class="quantity-label">Quantity</p>
+              <p class="quantity-label">Quantity</p>
 
 <div class="quantity-box">
   <div class="plus-btn"><p>-</p></div>
   <p id="quantity-value">1</p>
   <div class="minus-btn"><p>+</p></div>
 </div>
-
 <a href="">
 <p>
     Remove from cart
 </p>
 </a>
+        </div>
+
+    </div>
+
+    <div class="cart-box-main">
+       
+    <section class="section2">
+       
+
+
 
      <div class="divider"></div>
 
@@ -255,22 +253,69 @@ window.addEventListener('DOMContentLoaded', function() {
     return;
   }
 
-  // Loop through cart items and display them
+  // Render each cart item
   let html = '';
   Object.keys(cart).forEach(key => {
     const item = cart[key];
+    if (!item.quantity) item.quantity = 1;
     html += `
-      <div class="cart-product">
-        <img src="${item.img}" alt="${item.name}" class="cart-img" style="width:100px;height:auto;">
-        <div class="cart-info">
-          <h2 class="name">${item.name}</h2>
-          <p class="price">${item.price}</p>
+      <div class="items" data-key="${key}">
+        <img src="${item.img}" alt="${item.name}">
+        <h4>${item.name}</h4>
+        <p class="price">$${(parseFloat(item.price.replace(/[^0-9.]/g, '')) * item.quantity).toFixed(2)}</p>
+        <p class="quantity-label">Quantity</p>
+        <div class="quantity-box">
+          <div class="plus-btn" style="cursor:pointer;"><p>-</p></div>
+          <p class="quantity-value">${item.quantity}</p>
+          <div class="minus-btn" style="cursor:pointer;"><p>+</p></div>
         </div>
+        <p class="remove-cart" style="color:red;cursor:pointer;margin-top:10px;">Remove from cart</p>
       </div>
       <hr>
     `;
   });
   cartItemsDiv.innerHTML = html;
+
+  // Add event listeners for quantity and remove
+  document.querySelectorAll('.items').forEach(itemDiv => {
+    const key = itemDiv.getAttribute('data-key');
+    const plusBtn = itemDiv.querySelector('.plus-btn');
+    const minusBtn = itemDiv.querySelector('.minus-btn');
+    const quantityValue = itemDiv.querySelector('.quantity-value');
+    const priceElem = itemDiv.querySelector('.price');
+    const removeBtn = itemDiv.querySelector('.remove-cart');
+    let item = cart[key];
+    let unitPrice = parseFloat(item.price.replace(/[^0-9.]/g, ''));
+
+    plusBtn.addEventListener('click', () => {
+      if (item.quantity > 1) {
+        item.quantity--;
+        quantityValue.textContent = item.quantity;
+        priceElem.textContent = `$${(unitPrice * item.quantity).toFixed(2)}`;
+        cart[key] = item;
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }
+    });
+
+    minusBtn.addEventListener('click', () => {
+      item.quantity++;
+      quantityValue.textContent = item.quantity;
+      priceElem.textContent = `$${(unitPrice * item.quantity).toFixed(2)}`;
+      cart[key] = item;
+      localStorage.setItem('cart', JSON.stringify(cart));
+    });
+
+    removeBtn.addEventListener('click', () => {
+      delete cart[key];
+      localStorage.setItem('cart', JSON.stringify(cart));
+      itemDiv.parentNode.removeChild(itemDiv.nextSibling); // remove <hr>
+      itemDiv.remove();
+      // If cart is empty after removal
+      if (Object.keys(cart).length === 0) {
+        cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+      }
+    });
+  });
 });
 </script>
 </body>
