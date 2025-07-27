@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Dinpro';
+    src: url(fonts/dinpro.otf);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +9,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Dinpro", sans-serif;
   background: #fff;
   color: #222;
   padding-left: 3rem;
@@ -238,7 +242,7 @@ body {
 
 
 .body-home {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Dinpro", sans-serif;
   background: #fff;
   color: #222;
   padding-left: 0rem;
@@ -499,9 +503,11 @@ body {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     padding-top: 80px;
+    font-family: "Dinpro", sans-serif;
   }
   .body-home{
     padding-top: 60px;
+    font-family: "Dinpro", sans-serif;
   }
 
   .container22{
@@ -651,6 +657,12 @@ body {
     margin-top: 1rem;
   }
 
+
+   .info .name {
+    font-weight: 300;
+    color: #000000;
+    font-size: 12px;
+  }
 
     .desktop-carousel {
     display: none;
