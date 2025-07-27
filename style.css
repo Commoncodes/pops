@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Dinpro';
+    src: url(fonts/dinpro.otf);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +9,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Dinpro", sans-serif;
   background: #fff;
   color: #222;
   padding-left: 3rem;
@@ -251,7 +255,7 @@ body {
 
 
 .body-home {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Dinpro", sans-serif;
   background: #fff;
   color: #222;
   padding-left: 0rem;
