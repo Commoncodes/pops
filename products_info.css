@@ -48,6 +48,10 @@ body {
 }
 
 
+.cart{
+   display: none;
+}
+
 .search-icon {
   display: none;
   font-size: 22px;
@@ -535,6 +539,22 @@ body {
     margin-left: auto;
     order: 3;
   }
+  .cart-box {
+    display: flex;
+    flex-direction: row;
+    top: 8;
+    position: relative;
+    z-index: 2;
+  }
+
+
+
+  .cart{
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+ 
   .icons {
     display: none;
   }
