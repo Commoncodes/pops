@@ -15,7 +15,7 @@
 <header class="navbar">
   <span class="search-icon" aria-label="Search">🔍</span>
   <input type="text" class="search-bar" placeholder="LABUBU">
-  <div class="logo">POP MART</div>
+  <div class="logo" onclick="location.href='home.html'">POP MART</div>
   <div class="icons">
     <img class="nav-icons" src="images/customerService.webp" alt="">
     <img class="nav-icons" src="images/headerUserIcon2.png" alt="">
@@ -53,16 +53,48 @@
         <div class="product-img" >
               <img src="" id="product-img">
         </div>
-        <div class="product-description" id="product-description">
+        <div class="product-description">
+          <h2 class="name"></h2>
+          <p class="price"></p>
 
-        </div>
+         
     </div>
 
+    <section class="section2">
+         <p class="quantity-label">Quantity</p>
 
+<div class="quantity-box">
+  <div class="plus-btn"><p>-</p></div>
+  <p id="quantity-value">1</p>
+  <div class="minus-btn"><p>+</p></div>
+</div>
 
+     <button class="add-to-cart-btn">Add to Cart</button>
 
-   
+     <div class="divider"></div>
+
+     <h5>Details</h5>
+     <div class="detail-box">
+       <p>Brand: POP MART</p>
+     <p>Online Release(Official Website): July 24, 2025 at 7:00 PM (PST)</p>
+     <P>SIZE: Height: 10cm / 3.94inches</P>
+     <p>MATERIAL: PVC / ABS</p>
+     <p>Not suitable for persons under 15.</p>
+     <p>*Due to differences in measurement methods, the actual measurement may vary within a normal range of 0.19 - 0.39</p>
+     </div>
     
+          <div class="divider"></div>
+
+          <h4>Store Pickup Policy</h4>
+
+                    <div class="divider"></div>
+
+    </section>
+  
+
+
+     
+        </div>
 
           <section class="products container22">
       <span class="app-only">APP ONLY</span>
@@ -383,19 +415,47 @@
 <script>
 window.addEventListener('DOMContentLoaded', function() {
   const img = localStorage.getItem('productImg');
-  const brand = localStorage.getItem('productBrand');
   const name = localStorage.getItem('productName');
   const price = localStorage.getItem('productPrice');
-  if (img && brand && name && price) {
+  if (img && name && price) {
     document.getElementById('product-img').src = img;
-    document.getElementById('product-description').innerHTML = `
-      <p class="brand">${brand}</p>
-      <p class="name">${name}</p>
-      <p class="price">${price}</p>
-    `;
+    document.querySelector('.product-description .name').textContent = name;
+    document.querySelector('.product-description .price').textContent = price;
   }
 });
 </script>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  const img = localStorage.getItem('productImg');
+  const name = localStorage.getItem('productName');
+  const price = localStorage.getItem('productPrice');
+  if (img && name && price) {
+    document.getElementById('product-img').src = img;
+    document.querySelector('.product-description .name').textContent = name;
 
+    // Extract numeric value from price string (e.g., "$27.99")
+    const unitPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
+    let quantity = 1;
+
+    const priceElem = document.querySelector('.product-description .price');
+    const quantityValue = document.getElementById('quantity-value');
+    priceElem.textContent = `$${(unitPrice * quantity).toFixed(2)}`;
+
+    document.querySelector('.plus-btn').addEventListener('click', () => {
+      if (quantity > 1) {
+        quantity--;
+        quantityValue.textContent = quantity;
+        priceElem.textContent = `$${(unitPrice * quantity).toFixed(2)}`;
+      }
+    });
+
+    document.querySelector('.minus-btn').addEventListener('click', () => {
+      quantity++;
+      quantityValue.textContent = quantity;
+      priceElem.textContent = `$${(unitPrice * quantity).toFixed(2)}`;
+    });
+  }
+});
+</script>
 </body>
 </html>
