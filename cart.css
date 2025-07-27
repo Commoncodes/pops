@@ -247,8 +247,14 @@ window.addEventListener('DOMContentLoaded', function() {
   // Remove any previously rendered items except the template
   cartItemsDiv.querySelectorAll('.items:not(#cart-item-template)').forEach(el => el.remove());
 
+  // Remove any "Your cart is empty." message
+  cartItemsDiv.querySelectorAll('p').forEach(p => {
+    if (p.textContent === 'Your cart is empty.') p.remove();
+  });
+
   if (Object.keys(cart).length === 0) {
     cartItemsDiv.innerHTML += '<p>Your cart is empty.</p>';
+    updateCartBadge();
     return;
   }
 
@@ -280,6 +286,7 @@ window.addEventListener('DOMContentLoaded', function() {
         priceElem.textContent = `$${(unitPrice * item.quantity).toFixed(2)}`;
         cart[key] = item;
         localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartBadge();
       }
     });
 
@@ -289,12 +296,14 @@ window.addEventListener('DOMContentLoaded', function() {
       priceElem.textContent = `$${(unitPrice * item.quantity).toFixed(2)}`;
       cart[key] = item;
       localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartBadge();
     });
 
     removeBtn.addEventListener('click', () => {
       delete cart[key];
       localStorage.setItem('cart', JSON.stringify(cart));
       clone.remove();
+      updateCartBadge();
       if (Object.keys(cart).length === 0) {
         cartItemsDiv.innerHTML += '<p>Your cart is empty.</p>';
       }
@@ -302,7 +311,21 @@ window.addEventListener('DOMContentLoaded', function() {
 
     cartItemsDiv.appendChild(clone);
   });
+
+  updateCartBadge();
 });
+
+function updateCartBadge() {
+  const cartBadge = document.getElementById('cart-badge');
+  let cart = JSON.parse(localStorage.getItem('cart') || '{}');
+  const count = Object.keys(cart).length;
+  if (count > 0) {
+    cartBadge.style.display = 'inline-block';
+    cartBadge.textContent = count;
+  } else {
+    cartBadge.style.display = 'none';
+  }
+}
 </script>
 <script>
 window.addEventListener('DOMContentLoaded', function() {
