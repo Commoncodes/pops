@@ -80,9 +80,22 @@
     <section class="section2">
        
 
+      <div class="total-box">
+        <h3>Order Summary</h3>
+        <div class="divider"></div>
+        <p class="total-price">Total: $0.00</p>
+        <div class="divider"></div>
+        <p class="shipping">Shipping: $0.00</p>
+        <div class="divider"></div>
+        <p class="grand-total">Grand Total: $0.00</p>
+         <div class="divider"></div>
+        <p class="amount-btc">Bitcoin: 0.00</p>
+      </div>
+      
+      <button>
+        Checkout
+      </button>
 
-
-     <div class="divider"></div>
 
     
     
@@ -247,8 +260,14 @@ window.addEventListener('DOMContentLoaded', function() {
   // Remove any previously rendered items except the template
   cartItemsDiv.querySelectorAll('.items:not(#cart-item-template)').forEach(el => el.remove());
 
+  // Remove any "Your cart is empty." message
+  cartItemsDiv.querySelectorAll('p').forEach(p => {
+    if (p.textContent === 'Your cart is empty.') p.remove();
+  });
+
   if (Object.keys(cart).length === 0) {
     cartItemsDiv.innerHTML += '<p>Your cart is empty.</p>';
+    updateCartBadge();
     return;
   }
 
@@ -280,6 +299,9 @@ window.addEventListener('DOMContentLoaded', function() {
         priceElem.textContent = `$${(unitPrice * item.quantity).toFixed(2)}`;
         cart[key] = item;
         localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartBadge();
+            updateTotalPrice(); // add this
+
       }
     });
 
@@ -289,18 +311,103 @@ window.addEventListener('DOMContentLoaded', function() {
       priceElem.textContent = `$${(unitPrice * item.quantity).toFixed(2)}`;
       cart[key] = item;
       localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartBadge();
+          updateTotalPrice(); // add this
+
     });
 
     removeBtn.addEventListener('click', () => {
       delete cart[key];
       localStorage.setItem('cart', JSON.stringify(cart));
       clone.remove();
+      updateCartBadge();
       if (Object.keys(cart).length === 0) {
         cartItemsDiv.innerHTML += '<p>Your cart is empty.</p>';
       }
     });
 
     cartItemsDiv.appendChild(clone);
+  });
+
+  updateCartBadge();
+      updateTotalPrice(); // add this
+
+});
+
+function updateCartBadge() {
+  const cartBadge = document.getElementById('cart-badge');
+  let cart = JSON.parse(localStorage.getItem('cart') || '{}');
+  const count = Object.keys(cart).length;
+  if (count > 0) {
+    cartBadge.style.display = 'inline-block';
+    cartBadge.textContent = count;
+  } else {
+    cartBadge.style.display = 'none';
+  }
+}
+
+
+function updateTotalPrice() {
+  let cart = JSON.parse(localStorage.getItem('cart') || '{}');
+  let total = 0;
+  Object.values(cart).forEach(item => {
+    const unitPrice = parseFloat(item.price.replace(/[^0-9.]/g, ''));
+    total += unitPrice * (item.quantity || 1);
+  });
+  document.querySelector('.total-price').textContent = `Total: $${total.toFixed(2)}`;
+  document.querySelector('.grand-total').textContent = `Grand Total: $${total.toFixed(2)}`;
+
+  // Fetch live BTC rate and update Bitcoin amount
+  fetch('https://api.coindesk.com/v1/bpi/currentprice/USD.json')
+    .then(response => response.json())
+    .then(data => {
+      const btcRate = data.bpi.USD.rate_float; // USD per 1 BTC
+      const btcAmount = total / btcRate;
+      document.querySelector('.amount-btc').textContent = `Bitcoin: ${btcAmount.toFixed(6)}`;
+    })
+    .catch(() => {
+      document.querySelector('.amount-btc').textContent = `Bitcoin: N/A`;
+    });
+}
+</script>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  // ...other code...
+  const img = localStorage.getItem('productImg');
+  const name = localStorage.getItem('productName');
+  const price = localStorage.getItem('productPrice');
+  const addToCartBtn = document.getElementById('add-to-cart-btn');
+  const cartBadge = document.getElementById('cart-badge');
+  const productKey = img; // unique per product
+
+  let cart = JSON.parse(localStorage.getItem('cart') || '{}');
+  let inCart = !!cart[productKey];
+
+  function updateCartUI() {
+    const count = Object.keys(cart).length;
+    if (count > 0) {
+      cartBadge.style.display = 'inline-block';
+      cartBadge.textContent = count;
+    } else {
+      cartBadge.style.display = 'none';
+    }
+    addToCartBtn.textContent = inCart ? 'Remove from Cart' : 'Add to Cart';
+  }
+  updateCartUI();
+
+  addToCartBtn.addEventListener('click', function() {
+    inCart = !inCart;
+    if (inCart) {
+      cart[productKey] = {
+        img: img,
+        name: name,
+        price: price
+      };
+    } else {
+      delete cart[productKey];
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartUI();
   });
 });
 </script>
