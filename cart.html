@@ -358,16 +358,16 @@ function updateTotalPrice() {
   document.querySelector('.grand-total').textContent = `Grand Total: $${total.toFixed(2)}`;
 
   // Fetch live BTC rate and update Bitcoin amount
-  fetch('https://api.coindesk.com/v1/bpi/currentprice/USD.json')
-    .then(response => response.json())
-    .then(data => {
-      const btcRate = data.bpi.USD.rate_float; // USD per 1 BTC
-      const btcAmount = total / btcRate;
-      document.querySelector('.amount-btc').textContent = `Bitcoin: ${btcAmount.toFixed(6)}`;
-    })
-    .catch(() => {
-      document.querySelector('.amount-btc').textContent = `Bitcoin: N/A`;
-    });
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
+  .then(response => response.json())
+  .then(data => {
+    const btcRate = data.bitcoin.usd; // USD per 1 BTC
+    const btcAmount = total / btcRate;
+    document.querySelector('.amount-btc').textContent = `Bitcoin: ${btcAmount.toFixed(6)}`;
+  })
+  .catch(() => {
+    document.querySelector('.amount-btc').textContent = `Bitcoin: N/A`;
+  });
 }
 </script>
 <script>
