@@ -118,67 +118,68 @@
       </div>
   </div>
    <div class="new-arrivals-grid">
-   <div class="new-arrivals-img">
+   <div class="new-arrivals-img" onclick="viewNewArrival(this)">
     <img src="images/arrivalImage1.jpg" alt="Slide 1" class="arrival-image">
     <div class="arrival-text">
-         <p class="brand">Cry baby Coconut Figure-Brown</p>
-         <p class="price">$27.99</p>   
+         <p class="brand name">Cry baby Coconut Figure-Brown</p>
+         <p class="price">$45.99</p> 
+ 
       </div>
    </div>
-   <div class="new-arrivals-img">
+   <div class="new-arrivals-img" onclick="viewNewArrival(this)">
         <img src="images/arrivalImage2.jpg" alt="Slide 1" class="arrival-image">
         <div class="arrival-text">
-         <p class="brand">CRYBABY SHINY SHINY SERIES</p>
-         <p class="price">$27.99</p>   
+         <p class="brand name">CRYBABY SHINY SHINY SERIES</p>
+         <p class="price">$57.00</p>   
       </div>
 
    </div>
-   <div class="new-arrivals-img">
+   <div class="new-arrivals-img" onclick="viewProduct(this)">
         <img src="images/arrivalImage3.jpg" alt="Slide 1" class="arrival-image">
         <div class="arrival-text">
-         <p class="brand">CRYBABY SHINY SHINY SERIES</p>
-         <p class="price">$27.99</p>   
+         <p class="brand name">CRYBABY SHINY SHINY SERIES</p>
+         <p class="price">$150.81</p>   
       </div>
 
    </div>
-   <div class="new-arrivals-img">
+   <div class="new-arrivals-img" onclick="viewProduct(this)">
         <img src="images/arrivalImage4.jpg" alt="Slide 1" class="arrival-image">
         <div class="arrival-text">
-         <p class="brand">Nyota I am the season series</p>
-         <p class="price">$27.99</p>   
+         <p class="brand name">Nyota I am the season series</p>
+         <p class="price">$111.99</p>   
       </div>
 
    </div>
 
 
 
-      <div class="new-arrivals-img">
+      <div class="new-arrivals-img"  onclick="viewProduct(this)">
     <img src="images/arrivalImage1.jpg" alt="Slide 1" class="arrival-image">
     <div class="arrival-text">
-         <p class="brand">Cry baby Coconut Figure-Brown</p>
+         <p class="brand name">Cry baby Coconut Figure-Brown</p>
          <p class="price">$27.99</p>   
       </div>
    </div>
-   <div class="new-arrivals-img">
+   <div class="new-arrivals-img"  onclick="viewProduct(this)">
         <img src="images/arrivalImage2.jpg" alt="Slide 1" class="arrival-image">
         <div class="arrival-text">
-         <p class="brand">CRYBABY SHINY SHINY SERIES</p>
+         <p class="brand name">CRYBABY SHINY SHINY SERIES</p>
          <p class="price">$27.99</p>   
       </div>
 
    </div>
-   <div class="new-arrivals-img">
+   <div class="new-arrivals-img"  onclick="viewProduct(this)">
         <img src="images/arrivalImage3.jpg" alt="Slide 1" class="arrival-image">
         <div class="arrival-text">
-         <p class="brand">CRYBABY SHINY SHINY SERIES</p>
+         <p class="brand name">CRYBABY SHINY SHINY SERIES</p>
          <p class="price">$27.99</p>   
       </div>
 
    </div>
-   <div class="new-arrivals-img">
+   <div class="new-arrivals-img"  onclick="viewProduct(this)">
         <img src="images/arrivalImage4.jpg" alt="Slide 1" class="arrival-image">
         <div class="arrival-text">
-         <p class="brand">Nyota I am the season series</p>
+         <p class="brand name">Nyota I am the season series</p>
          <p class="price">$27.99</p>   
       </div>
 
@@ -1171,17 +1172,30 @@ artistGrid.addEventListener('touchmove', (e) => {
 </script>
 
 <script>
-function viewProduct(el) {
+const newArrivalVariations = {
+  "Cry baby Coconut Figure-Brown": Array.from({length: 14}, (_, i) => `images/disney_princess/princess${i+1}.webp`),
+  "CRYBABY SHINY SHINY SERIES": Array.from({length: 14}, (_, i) => `images/mega/molly${i+1}.webp`),
+  "Nyota I am the season series": ["images/arrivalImage4.jpg"]
+  // Add more products as needed
+};
+
+function viewNewArrival(el) {
   const img = el.querySelector('img').getAttribute('src');
   const brand = el.querySelector('.brand').innerText;
-  const name = el.querySelector('.name').innerText;
+  const name = el.querySelector('.name') ? el.querySelector('.name').innerText : brand;
   const price = el.querySelector('.price').innerText;
+
+  // Use the mapping for variations, or just the main image if none
+  const variations = newArrivalVariations[name] || [img];
+  localStorage.setItem('productVariations', JSON.stringify(variations));
   localStorage.setItem('productImg', img);
   localStorage.setItem('productBrand', brand);
   localStorage.setItem('productName', name);
   localStorage.setItem('productPrice', price);
-  window.location.href = 'products_info.html';
+  window.location.href = 'product-info2.html';
 }
 </script>
+
+
 </body>
 </html>
