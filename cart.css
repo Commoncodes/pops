@@ -938,6 +938,46 @@ body {
     font-size: 0.7rem;
   }
 
+  .total-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 1rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .payment-method {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.payment-method p {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.payment-option input[type="radio"] {
+  accent-color: black;
+}
+
+.payment-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.icon-holder{
+width: 100%;
+display: flex;
+align-items: center;
+}
 
 
 
