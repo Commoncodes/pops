@@ -206,20 +206,20 @@
       <div class="pop-now-carousel-wrapper">
     <button class="pop-now-btn prev-btn">&#10094;</button>
         <div class="pop-now-grid">
-   <div class="pop-now-img" onclick="window.location.href='megamolly.html'">
+   <div class="pop-now-img" onclick="viewPopNow(this)">
     <img src="images/popbox1.webp" alt="Slide 1" class="pop-now-image">
     <div class="pop-now-text">
-         <p class="brand">CRYBABY x <br> Powerpuff Girls</p>
+         <p class="brand">CRYBABY x <br>Powerpuff Girls</p>
          <p class="price">$299.90/PICK</p>   
            <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
    </div>
-   <div class="pop-now-img">
+   <div class="pop-now-img" onclick="viewPopNow(this)">
         <img src="images/popbox2.webp" alt="Slide 1" class="pop-now-image">
         <div class="pop-now-text">
-         <p class="brand">PUCKY Roly-Poly <br> Kitty Series</p>
+         <p class="brand">PUCKY Roly-Poly <br>Kitty Series</p>
          <p class="price">$1,300.68/PICK</p>   
            <button onclick="window.location.href='shop.html'">
             Pick Now
@@ -227,7 +227,7 @@
       </div>
 
    </div>
-   <div class="pop-now-img">
+   <div class="pop-now-img" onclick="viewPopNow(this)">
         <img src="images/popbox3.webp" alt="Slide 1" class="pop-now-image">
         <div class="pop-now-text">
          <p class="brand">DIMOO WORLD x <br> DISNEY Series-Vinyl</p>
@@ -239,20 +239,20 @@
 
    </div>
 
-      <div class="pop-now-img">
-    <img src="images/popbox4.webp" alt="Slide 1" class="pop-now-image">
+      <div class="pop-now-img" onclick="viewPopNow(this)">
+    <img src="images/dimobox.webp" alt="Slide 1" class="pop-now-image">
     <div class="pop-now-text">
-         <p class="brand">CRYBABY x <br> Powerpuff Girls</p>
+         <p class="brand">DIMOO My Cloud  x <br> Companion Series</p>
          <p class="price">$1,112.99/PICK</p>   
           <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
    </div>
-   <div class="pop-now-img">
-        <img src="images/popbox6.webp" alt="Slide 1" class="pop-now-image">
+   <div class="pop-now-img" onclick="viewPopNow(this)">
+        <img src="images/stitchbox.webp" alt="Slide 1" class="pop-now-image">
         <div class="pop-now-text">
-         <p class="brand">PUCKY Roly-Poly <br> Kitty Series</p>
+         <p class="brand">Disney Stitch Little <br>Emotion Series</p>
          <p class="price">$19.99/PICK</p>   
            <button onclick="window.location.href='shop.html'">
             Pick Now
@@ -260,10 +260,10 @@
       </div>
 
    </div>
-   <div class="pop-now-img">
+   <div class="pop-now-img" onclick="viewPopNow(this)">
         <img src="images/popbox7.webp" alt="Slide 1" class="pop-now-image">
         <div class="pop-now-text">
-         <p class="brand">DIMOO WORLD x <br> DISNEY Series-Vinyl</p>
+         <p class="brand">CRYBABY Crying For x <br> Love Series Figure</p>
          <p class="price">$27.99/PICK</p>   
          <button onclick="window.location.href='shop.html'">
             Pick Now
@@ -272,20 +272,20 @@
 
    </div>
 
-      <div class="pop-now-img">
+      <div class="pop-now-img" onclick="viewPopNow(this)">
     <img src="images/popbox8.webp" alt="Slide 1" class="pop-now-image">
     <div class="pop-now-text">
-         <p class="brand">CRYBABY x <br> Powerpuff Girls</p>
+         <p class="brand">Baby Molly Pocket x <br> Friends Series</p>
          <p class="price">$22.99/PICK</p>   
            <button onclick="window.location.href='shop.html'">
             Pick Now
          </button>
       </div>
    </div>
-   <div class="pop-now-img">
+   <div class="pop-now-img" onclick="viewPopNow(this)">
         <img src="images/popbox6.webp" alt="Slide 1" class="pop-now-image">
         <div class="pop-now-text">
-         <p class="brand">PUCKY Roly-Poly <br> Kitty Series</p>
+         <p class="brand">Mega Molly <br> Hello Kitty Series</p>
          <p class="price">$30.99/PICK</p>   
             <button onclick="window.location.href='shop.html'">
             Pick Now
@@ -293,7 +293,7 @@
       </div>
 
    </div>
-   <div class="pop-now-img">
+   <div class="pop-now-img" onclick="viewPopNow(this)">
         <img src="images/popbox7.webp" alt="Slide 1" class="pop-now-image">
         <div class="pop-now-text">
          <p class="brand">DIMOO WORLD x <br> DISNEY Series-Vinyl</p>
@@ -1196,19 +1196,68 @@ function viewNewArrival(el) {
 }
 </script>
 
+
+<!--POP NOW SCRIPT -->
 <script>
-function viewProduct(el) {
+
+  const popNowVariations = {
+  "CRYBABY x Powerpuff Girls": [
+    "images/powerpuff/puff1.webp",
+    "images/powerpuff/puff2.webp",
+    "images/powerpuff/puff3.webp",
+    "images/powerpuff/puff4.webp",
+    "images/powerpuff/puff5.webp",
+    "images/powerpuff/puff6.webp"
+    // Add all variation image paths here
+  ],
+  // Add more Pop Now products as needed
+   "PUCKY Roly-Poly Kitty Series": [
+    "images/pucky/pucky1.webp",
+    "images/pucky/pucky2.webp",
+    "images/pucky/pucky3.webp",
+    "images/pucky/pucky4.webp",
+    "images/pucky/pucky5.webp",
+    "images/pucky/pucky6.webp"
+    // Add all variation image paths here
+  ],
+
+    "DIMOO WORLD x DISNEY Series-Vinyl":  [
+    "images/dimoo/dimoo1.webp",
+    "images/dimoo/dimoo2.webp",
+    "images/dimoo/dimoo3.webp",
+    "images/dimoo/dimoo4.webp",
+    "images/dimoo/dimoo5.webp",
+    "images/dimoo/dimoo6.webp",
+    "images/dimoo/dimoo7.webp",
+    "images/dimoo/dimoo8.webp",
+    "images/dimoo/dimoo9.webp",
+    "images/dimoo/dimoo10.webp",
+
+
+
+
+    // Add all variation image paths here
+  ],
+};
+function viewPopNow(el) {
   const img = el.querySelector('img').getAttribute('src');
-  const brand = el.querySelector('.brand').innerText;
-  const name = el.querySelector('.name').innerText;
+  const brandElem = el.querySelector('.brand');
+  let brand = brandElem ? brandElem.innerHTML.replace(/<br\s*\/?>/gi, ' ').replace(/\s+/g, ' ').trim() : '';
   const price = el.querySelector('.price').innerText;
+
+  // Use mapping or fallback to main image
+  const variations = popNowVariations[brand] || [img];
+
+  localStorage.setItem('productVariations', JSON.stringify(variations));
   localStorage.setItem('productImg', img);
   localStorage.setItem('productBrand', brand);
-  localStorage.setItem('productName', name);
+  localStorage.setItem('productName', brand);
   localStorage.setItem('productPrice', price);
-  window.location.href = 'products_info.html';
+  window.location.href = 'product-info2.html';
 }
 </script>
+
+
 
 </body>
 </html>
