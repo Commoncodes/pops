@@ -1196,6 +1196,19 @@ function viewNewArrival(el) {
 }
 </script>
 
+<script>
+function viewProduct(el) {
+  const img = el.querySelector('img').getAttribute('src');
+  const brand = el.querySelector('.brand').innerText;
+  const name = el.querySelector('.name').innerText;
+  const price = el.querySelector('.price').innerText;
+  localStorage.setItem('productImg', img);
+  localStorage.setItem('productBrand', brand);
+  localStorage.setItem('productName', name);
+  localStorage.setItem('productPrice', price);
+  window.location.href = 'products_info.html';
+}
+</script>
 
 </body>
 </html>
