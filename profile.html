@@ -62,12 +62,11 @@
     <span id="selectedCountry">United States</span>
     <!-- <span>›</span> -->
   </div>
+<!-- Email Input -->
+<input type="email" id="emailField" class="email-input" placeholder="Enter your e-mail address">
 
-  <!-- Email Input -->
-  <input type="email" class="email-input" placeholder="Enter your e-mail address">
-
-  <!-- Continue Button -->
-  <button class="continue-btn">CONTINUE</button>
+<!-- Continue Button -->
+<button id="continueBtn" class="continue-btn">CONTINUE</button>
 
   <!-- Divider -->
   <div class="divider"><span>Join With</span></div>
@@ -105,6 +104,22 @@
     </div>
   </div>
 </div>
+
+
+<!-- Register Modal -->
+<div class="modal" id="registerModal">
+  <div class="modal-header">
+    <span>Register</span>
+    <button id="closeRegisterModal">✕</button>
+  </div>
+  <div class="register-content">
+    <p>Register</p>
+    <input type="email" id="registerEmail" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Create Account</button>
+  </div>
+</div>
+
 
 
          
@@ -284,6 +299,40 @@
       }, 400);
     });
   });
+</script>
+
+<script>
+ const continueBtn = document.getElementById('continueBtn');
+const registerModal = document.getElementById('registerModal');
+const closeRegisterModalBtn = document.getElementById('closeRegisterModal');
+const registerEmail = document.getElementById('registerEmail');
+const emailField = document.getElementById('emailField');
+
+// Show register modal when Continue is clicked
+continueBtn.addEventListener('click', () => {
+  const emailValue = emailField.value.trim();
+  
+  if (!emailValue) {
+    alert("Please enter your email address.");
+    return; // stop here if no email
+  }
+
+  // if email exists, show modal
+  registerEmail.value = emailValue;
+  registerModal.style.display = 'flex';
+  setTimeout(() => {
+    registerModal.classList.add('show');
+  }, 10);
+});
+
+// Close register modal
+closeRegisterModalBtn.addEventListener('click', () => {
+  registerModal.classList.remove('show');
+  setTimeout(() => {
+    registerModal.style.display = 'none';
+  }, 400);
+});
+
 </script>
 
 </body>
