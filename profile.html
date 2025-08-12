@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>POP MART</title>
   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -53,8 +55,58 @@
 
 
 
+<div class="container">
+  <h2>SIGN IN OR REGISTER</h2>
 
-  
+  <!-- Country Selector -->
+  <div class="input-group" id="openModal">
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="US Flag">
+    <span id="selectedCountry">United States</span>
+    <span>›</span>
+  </div>
+
+  <!-- Email Input -->
+  <input type="email" class="email-input" placeholder="Enter your e-mail address">
+
+  <!-- Continue Button -->
+  <button class="continue-btn">CONTINUE</button>
+
+  <!-- Divider -->
+  <div class="divider"><span>Join With</span></div>
+
+  <!-- Social Buttons -->
+  <div class="social-buttons">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png" alt="Google">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+  </div>
+
+  <!-- Terms -->
+  <label class="terms">
+    <input type="checkbox">
+    By continuing, you agree to our Platform's Terms of Service and Privacy Policy
+  </label>
+</div>
+
+<div class="country-modal" id="countryModal">
+  <div class="modal-header">
+    <span>Select Country</span>
+    <button id="closeModal">✕</button>
+  </div>
+  <div class="country-list">
+    <div class="country-item" data-country="United States" data-flag="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"> United States
+    </div>
+    <div class="country-item" data-country="United Kingdom" data-flag="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"> United Kingdom
+    </div>
+    <div class="country-item" data-country="Canada" data-flag="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg"> Canada
+    </div>
+    <div class="country-item" data-country="Nigeria" data-flag="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg"> Nigeria
+    </div>
+  </div>
+</div>
 
 
          
@@ -197,480 +249,44 @@
     <span class="nav-label">Me</span>
 </nav>
 
-<script>
-// Desktop Carousel
-(function() {
-  const desktopCarousel = document.querySelector('.desktop-carousel');
-  if (!desktopCarousel) return;
-  const slides = desktopCarousel.querySelectorAll('.carousel-slide');
-  const dots = desktopCarousel.querySelectorAll('.carousel-dots .dot');
-  const nextBtn = desktopCarousel.querySelector('.carousel-btn.next');
-  const prevBtn = desktopCarousel.querySelector('.carousel-btn.prev');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-      dots[i].classList.toggle('active', i === index);
+
+
+<script>
+  const openModalBtn = document.getElementById('openModal');
+  const closeModalBtn = document.getElementById('closeModal');
+  const modal = document.getElementById('countryModal');
+  const selectedCountry = document.getElementById('selectedCountry');
+  const countryItems = document.querySelectorAll('.country-item');
+
+  openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    setTimeout(() => {
+      modal.classList.add('show');
+    }, 10); // small delay for smooth transition
+  });
+
+  closeModalBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 400);
+  });
+
+  countryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const country = item.getAttribute('data-country');
+      const flag = item.getAttribute('data-flag');
+
+      selectedCountry.innerHTML = `<img src="${flag}" style="width:20px; margin-right:8px; vertical-align:middle;"> ${country}`;
+      
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 400);
     });
-    currentSlide = index;
-  }
-
-  nextBtn.onclick = function() {
-    let next = (currentSlide + 1) % slides.length;
-    showSlide(next);
-  };
-  prevBtn.onclick = function() {
-    let prev = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prev);
-  };
-  dots.forEach((dot, i) => {
-    dot.onclick = () => showSlide(i);
   });
-
-  setInterval(() => {
-    let next = (currentSlide + 1) % slides.length;
-    showSlide(next);
-  }, 4000);
-})();
-
-// Mobile Carousel
-(function() {
-  const mobileCarousel = document.querySelector('.mobile-carousel');
-  if (!mobileCarousel) return;
-  const slides = mobileCarousel.querySelectorAll('.carousel-slide');
-  const dots = mobileCarousel.querySelectorAll('.carousel-dots .dot');
-  const nextBtn = mobileCarousel.querySelector('.carousel-btn.next');
-  const prevBtn = mobileCarousel.querySelector('.carousel-btn.prev');
-  let currentSlide = 0;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-      dots[i].classList.toggle('active', i === index);
-    });
-    currentSlide = index;
-  }
-
-  nextBtn.onclick = function() {
-    let next = (currentSlide + 1) % slides.length;
-    showSlide(next);
-  };
-  prevBtn.onclick = function() {
-    let prev = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prev);
-  };
-  dots.forEach((dot, i) => {
-    dot.onclick = () => showSlide(i);
-  });
-
-  setInterval(() => {
-    let next = (currentSlide + 1) % slides.length;
-    showSlide(next);
-  }, 4000);
-})();
 </script>
-<script>
-const arrivalsGrid = document.querySelector('.new-arrivals-grid');
-const arrivalsImgs = document.querySelectorAll('.new-arrivals-img');
-const prevBtn = document.querySelector('.new-line-btns .prev-btn');
-const nextBtn = document.querySelector('.new-line-btns .next-btn');
-let currentIndex = 0;
-const visibleCount = 4;
-
-function scrollArrivals(index) {
-  const itemWidth = arrivalsImgs[0].offsetWidth + 20; // 20px gap
-  arrivalsGrid.scrollTo({
-    left: index * itemWidth,
-    behavior: 'smooth'
-  });
-}
-
-nextBtn.onclick = function() {
-  if (currentIndex < arrivalsImgs.length - visibleCount) {
-    currentIndex++;
-    scrollArrivals(currentIndex);
-  }
-};
-prevBtn.onclick = function() {
-  if (currentIndex > 0) {
-    currentIndex--;
-    scrollArrivals(currentIndex);
-  }
-};
-</script>
-<script>
-const grid = document.querySelector('.new-arrivals-grid');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-grid.addEventListener('mousedown', (e) => {
-  isDown = true;
-  grid.classList.add('dragging');
-  startX = e.pageX - grid.offsetLeft;
-  scrollLeft = grid.scrollLeft;
-});
-grid.addEventListener('mouseleave', () => {
-  isDown = false;
-  grid.classList.remove('dragging');
-});
-grid.addEventListener('mouseup', () => {
-  isDown = false;
-  grid.classList.remove('dragging');
-});
-grid.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - grid.offsetLeft;
-  const walk = (x - startX) * 1.5; // scroll speed
-  grid.scrollLeft = scrollLeft - walk;
-});
-
-// Touch support for mobile
-grid.addEventListener('touchstart', (e) => {
-  isDown = true;
-  startX = e.touches[0].pageX - grid.offsetLeft;
-  scrollLeft = grid.scrollLeft;
-});
-grid.addEventListener('touchend', () => {
-  isDown = false;
-});
-grid.addEventListener('touchmove', (e) => {
-  if (!isDown) return;
-  const x = e.touches[0].pageX - grid.offsetLeft;
-  const walk = (x - startX) * 1.5;
-  grid.scrollLeft = scrollLeft - walk;
-});
-</script>
-<script>
-const popNowGrid = document.querySelector('.pop-now-grid');
-const popNowImgs = document.querySelectorAll('.pop-now-img');
-const popPrevBtn = document.querySelector('.pop-now-btn.prev-btn');
-const popNextBtn = document.querySelector('.pop-now-btn.next-btn');
-let popCurrentIndex = 0;
-const popVisibleCount = window.innerWidth <= 768 ? 2 : 4;
-
-function scrollPopNow(index) {
-  const itemWidth = popNowImgs[0].offsetWidth + parseInt(getComputedStyle(popNowGrid).gap) || 20;
-  popNowGrid.scrollTo({
-    left: index * itemWidth,
-    behavior: 'smooth'
-  });
-}
-
-popNextBtn.onclick = function() {
-  if (popCurrentIndex < popNowImgs.length - popVisibleCount) {
-    popCurrentIndex++;
-    scrollPopNow(popCurrentIndex);
-  }
-};
-popPrevBtn.onclick = function() {
-  if (popCurrentIndex > 0) {
-    popCurrentIndex--;
-    scrollPopNow(popCurrentIndex);
-  }
-};
-
-// Drag/Swipe support
-let isDownPop = false;
-let startXPop;
-let scrollLeftPop;
-
-popNowGrid.addEventListener('mousedown', (e) => {
-  isDownPop = true;
-  startXPop = e.pageX - popNowGrid.offsetLeft;
-  scrollLeftPop = popNowGrid.scrollLeft;
-});
-popNowGrid.addEventListener('mouseleave', () => {
-  isDownPop = false;
-});
-popNowGrid.addEventListener('mouseup', () => {
-  isDownPop = false;
-});
-popNowGrid.addEventListener('mousemove', (e) => {
-  if (!isDownPop) return;
-  e.preventDefault();
-  const x = e.pageX - popNowGrid.offsetLeft;
-  const walk = (x - startXPop) * 1.5;
-  popNowGrid.scrollLeft = scrollLeftPop - walk;
-});
-
-// Touch support
-popNowGrid.addEventListener('touchstart', (e) => {
-  isDownPop = true;
-  startXPop = e.touches[0].pageX - popNowGrid.offsetLeft;
-  scrollLeftPop = popNowGrid.scrollLeft;
-});
-popNowGrid.addEventListener('touchend', () => {
-  isDownPop = false;
-});
-popNowGrid.addEventListener('touchmove', (e) => {
-  if (!isDownPop) return;
-  const x = e.touches[0].pageX - popNowGrid.offsetLeft;
-  const walk = (x - startXPop) * 1.5;
-  popNowGrid.scrollLeft = scrollLeftPop - walk;
-});
-</script>
-<script>
-const hotProductGrid = document.querySelector('.hot-product-grid');
-const hotProductImgs = document.querySelectorAll('.hot-product-img');
-const hotPrevBtn = document.querySelector('.hot-carousel-btns .prev-btn');
-const hotNextBtn = document.querySelector('.hot-carousel-btns .next-btn');
-let hotCurrentIndex = 0;
-const hotVisibleCount = window.innerWidth <= 768 ? 2 : 4;
-
-function scrollHotProduct(index) {
-  const itemWidth = hotProductImgs[0].offsetWidth + parseInt(getComputedStyle(hotProductGrid).gap) || 20;
-  hotProductGrid.scrollTo({
-    left: index * itemWidth,
-    behavior: 'smooth'
-  });
-}
-
-hotNextBtn.onclick = function() {
-  if (hotCurrentIndex < hotProductImgs.length - hotVisibleCount) {
-    hotCurrentIndex++;
-    scrollHotProduct(hotCurrentIndex);
-  }
-};
-hotPrevBtn.onclick = function() {
-  if (hotCurrentIndex > 0) {
-    hotCurrentIndex--;
-    scrollHotProduct(hotCurrentIndex);
-  }
-};
-
-// Drag/Swipe support
-let isDownHot = false;
-let startXHot;
-let scrollLeftHot;
-
-hotProductGrid.addEventListener('mousedown', (e) => {
-  isDownHot = true;
-  startXHot = e.pageX - hotProductGrid.offsetLeft;
-  scrollLeftHot = hotProductGrid.scrollLeft;
-});
-hotProductGrid.addEventListener('mouseleave', () => {
-  isDownHot = false;
-});
-hotProductGrid.addEventListener('mouseup', () => {
-  isDownHot = false;
-});
-hotProductGrid.addEventListener('mousemove', (e) => {
-  if (!isDownHot) return;
-  e.preventDefault();
-  const x = e.pageX - hotProductGrid.offsetLeft;
-  const walk = (x - startXHot) * 1.5;
-  hotProductGrid.scrollLeft = scrollLeftHot - walk;
-});
-
-// Touch support
-hotProductGrid.addEventListener('touchstart', (e) => {
-  isDownHot = true;
-  startXHot = e.touches[0].pageX - hotProductGrid.offsetLeft;
-  scrollLeftHot = hotProductGrid.scrollLeft;
-});
-hotProductGrid.addEventListener('touchend', () => {
-  isDownHot = false;
-});
-hotProductGrid.addEventListener('touchmove', (e) => {
-  if (!isDownHot) return;
-  const x = e.touches[0].pageX - hotProductGrid.offsetLeft;
-  const walk = (x - startXHot) * 1.5;
-  hotProductGrid.scrollLeft = scrollLeftHot - walk;
-});
-</script>
-<script>
-const artistGrid = document.querySelector('.our-artist-section');
-const artistCards = document.querySelectorAll('.artist-card');
-const artistPrevBtn = document.querySelector('.artist-btn.prev-btn');
-const artistNextBtn = document.querySelector('.artist-btn.next-btn');
-let artistCurrentIndex = 0;
-const artistVisibleCount = window.innerWidth <= 768 ? 1 : 2;
-
-function scrollArtist(index) {
-  const itemWidth = artistCards[0].offsetWidth + parseInt(getComputedStyle(artistGrid).gap) || 30;
-  artistGrid.scrollTo({
-    left: index * itemWidth,
-    behavior: 'smooth'
-  });
-}
-
-artistNextBtn.onclick = function() {
-  if (artistCurrentIndex < artistCards.length - artistVisibleCount) {
-    artistCurrentIndex++;
-    scrollArtist(artistCurrentIndex);
-  }
-};
-artistPrevBtn.onclick = function() {
-  if (artistCurrentIndex > 0) {
-    artistCurrentIndex--;
-    scrollArtist(artistCurrentIndex);
-  }
-};
-
-// Drag/Swipe support
-let isDownArtist = false;
-let startXArtist;
-let scrollLeftArtist;
-
-artistGrid.addEventListener('mousedown', (e) => {
-  isDownArtist = true;
-  startXArtist = e.pageX - artistGrid.offsetLeft;
-  scrollLeftArtist = artistGrid.scrollLeft;
-});
-artistGrid.addEventListener('mouseleave', () => {
-  isDownArtist = false;
-});
-artistGrid.addEventListener('mouseup', () => {
-  isDownArtist = false;
-});
-artistGrid.addEventListener('mousemove', (e) => {
-  if (!isDownArtist) return;
-  e.preventDefault();
-  const x = e.pageX - artistGrid.offsetLeft;
-  const walk = (x - startXArtist) * 1.5;
-  artistGrid.scrollLeft = scrollLeftArtist - walk;
-});
-
-// Touch support
-artistGrid.addEventListener('touchstart', (e) => {
-  isDownArtist = true;
-  startXArtist = e.touches[0].pageX - artistGrid.offsetLeft;
-  scrollLeftArtist = artistGrid.scrollLeft;
-});
-artistGrid.addEventListener('touchend', () => {
-  isDownArtist = false;
-});
-artistGrid.addEventListener('touchmove', (e) => {
-  if (!isDownArtist) return;
-  const x = e.touches[0].pageX - artistGrid.offsetLeft;
-  const walk = (x - startXArtist) * 1.5;
-  artistGrid.scrollLeft = scrollLeftArtist - walk;
-});
-</script>
-
-<script>
-const newArrivalVariations = {
-  "Cry baby Coconut Figure-Brown": Array.from({length: 14}, (_, i) => `images/disney_princess/princess${i+1}.webp`),
-  "CRYBABY SHINY SHINY SERIES": Array.from({length: 14}, (_, i) => `images/mega/molly${i+1}.jpg`),
-  "Nyota I am the season series": ["images/arrivalImage4.jpg"]
-  // Add more products as needed
-};
-
-function viewNewArrival(el) {
-  const img = el.querySelector('img').getAttribute('src');
-  const brand = el.querySelector('.brand').innerText;
-  const name = el.querySelector('.name') ? el.querySelector('.name').innerText : brand;
-  const price = el.querySelector('.price').innerText;
-
-  // Use the mapping for variations, or just the main image if none
-  const variations = newArrivalVariations[name] || [img];
-  localStorage.setItem('productVariations', JSON.stringify(variations));
-  localStorage.setItem('productImg', img);
-  localStorage.setItem('productBrand', brand);
-  localStorage.setItem('productName', name);
-  localStorage.setItem('productPrice', price);
-  window.location.href = 'product-info2.html';
-}
-</script>
-
-
-<!--POP NOW SCRIPT -->
-<script>
-
-  const popNowVariations = {
-  "CRYBABY x Powerpuff Girls": [
-    "images/powerpuff/puff1.webp",
-    "images/powerpuff/puff2.webp",
-    "images/powerpuff/puff3.webp",
-    "images/powerpuff/puff4.webp",
-    "images/powerpuff/puff5.webp",
-    "images/powerpuff/puff6.webp"
-    // Add all variation image paths here
-  ],
-  // Add more Pop Now products as needed
-   "PUCKY Roly-Poly Kitty Series": [
-    "images/pucky/pucky1.webp",
-    "images/pucky/pucky2.webp",
-    "images/pucky/pucky3.webp",
-    "images/pucky/pucky4.webp",
-    "images/pucky/pucky5.webp",
-    "images/pucky/pucky6.webp"
-    // Add all variation image paths here
-  ],
-
-    "DIMOO WORLD x DISNEY Series-Vinyl":  [
-    "images/dimoo/dimoo1.webp",
-    "images/dimoo/dimoo2.webp",
-    "images/dimoo/dimoo3.webp",
-    "images/dimoo/dimoo4.webp",
-    "images/dimoo/dimoo5.webp",
-    "images/dimoo/dimoo6.webp",
-    "images/dimoo/dimoo7.webp",
-    "images/dimoo/dimoo8.webp",
-    "images/dimoo/dimoo9.webp",
-    "images/dimoo/dimoo10.webp",
-
-    // Add all variation image paths here
-  ],
-
-
-      "Disney Stitch Little Emotion Series":  [
-    "images/stitch/stitch1.webp",
-    "images/stitch/stitch2.webp",
-    "images/stitch/stitch3.webp",
-    "images/stitch/stitch4.webp",
-    "images/stitch/stitch5.webp",
-    "images/stitch/stitch6.webp",
-    "images/stitch/stitch7.webp",
-    "images/stitch/stitch8.webp",
-    "images/stitch/stitch9.webp",
-    "images/stitch/stitch10.webp",
-        "images/stitch/stitch11.webp",
-
-
-    // Add all variation image paths here
-  ],
-
-
-    "CRYBABY Crying For x Love Series Figure":  [
-    "images/crying/crying1.webp",
-    "images/crying/crying2.webp",
-    "images/crying/crying3.webp",
-    "images/crying/crying4.webp",
-    "images/crying/crying5.webp",
-    "images/crying/crying6.webp",
-    "images/crying/crying7.webp",
-    "images/crying/crying8.webp",
-    "images/crying/crying9.webp",
-    "images/crying/crying10.webp",
-    "images/crying/crying11.webp",
-
-
-    // Add all variation image paths here
-  ],
-};
-function viewPopNow(el) {
-  const img = el.querySelector('img').getAttribute('src');
-  const brandElem = el.querySelector('.brand');
-  let brand = brandElem ? brandElem.innerHTML.replace(/<br\s*\/?>/gi, ' ').replace(/\s+/g, ' ').trim() : '';
-  const price = el.querySelector('.price').innerText;
-
-  // Use mapping or fallback to main image
-  const variations = popNowVariations[brand] || [img];
-
-  localStorage.setItem('productVariations', JSON.stringify(variations));
-  localStorage.setItem('productImg', img);
-  localStorage.setItem('productBrand', brand);
-  localStorage.setItem('productName', brand);
-  localStorage.setItem('productPrice', price);
-  window.location.href = 'product-info2.html';
-}
-</script>
-
-
 
 </body>
 </html>

@@ -1,0 +1,25 @@
+.featured-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 16px;
+  margin-top: 1rem;
+}
+
+.featured-box p {
+  margin: 0;
+  margin-top: 1REM;
+  font-size: 0.8rem;
+}
+
+.featured-box img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.featured-link{
+  text-decoration: none;
+  color: #000000;
+}
+ 

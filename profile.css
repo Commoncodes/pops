@@ -1,0 +1,158 @@
+.container {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 3rem;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    justify-content: space-between;
+  }
+
+  .input-group img {
+    width: 20px;
+    margin-right: 8px;
+  }
+
+  .input-group span {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .email-input {
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+
+  .continue-btn {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #666;
+    font-size: 12px;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .divider span {
+    margin: 0 10px;
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .social-buttons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .terms {
+    font-size: 11px;
+    color: #666;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .terms input {
+    margin-top: 2px;
+  }
+
+  .terms a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  /* Full-screen country modal */
+  .country-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 999;
+    display: none; /* hidden initially */
+    flex-direction: column;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .country-modal.show {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  .modal-header button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+
+  .country-list {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .country-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+
+  .country-item img {
+    width: 20px;
+    margin-right: 10px;
+  }
