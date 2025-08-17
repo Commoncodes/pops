@@ -107,8 +107,8 @@
 </div>
         <p class="amount-btc">Bitcoin: 0.00</p>
       </div>
-      
-      <button>
+
+      <button id="checkout-btn">
         Checkout
       </button>
 
@@ -268,7 +268,14 @@
 </a>
 </nav>
 
-
+<div id="checkout-modal" class="checkout-modal">
+  <div class="modal-content">
+    <h3>Send Bitcoin Payment</h3>
+    <p>Wallet Address:</p>
+    <div class="wallet-address">xxxxxxxxxxxxxxxxxxxxxx</div>
+    <button id="payment-sent-btn">I've sent the payment</button>
+  </div>
+</div>
 
 
 <script>
@@ -429,6 +436,19 @@ window.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartUI();
   });
+});
+</script>
+
+<script>
+document.getElementById('checkout-btn').addEventListener('click', function(e) {
+  if (e.target.textContent.trim().toLowerCase() === 'checkout') {
+    document.getElementById('checkout-modal').classList.add('active');
+  }
+});
+
+document.getElementById('payment-sent-btn').addEventListener('click', function() {
+  alert('Thank you! We will verify your payment soon.');
+  document.getElementById('checkout-modal').classList.remove('active');
 });
 </script>
 </body>
