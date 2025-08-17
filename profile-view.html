@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POP MART</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="profile-view.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body class="body-home">
+
+  <!-- Navbar -->
+<header class="navbar">
+  <span class="search-icon" aria-label="Search">🔍</span>
+  <input type="text" class="search-bar" placeholder="LABUBU">
+  <div class="logo">POP MART</div>
+  <div class="icons">
+    <img class="nav-icons" src="images/customerService.webp" alt="">
+    <img class="nav-icons" src="images/headerUserIcon2.png" alt="">
+    <img class="nav-icons" src="images/heart_circle.png" alt="">
+    <img class="nav-icons" src="images/bag.png" alt="">
+  
+  </div>
+  <button class="hamburger" aria-label="Open menu">&#9776;</button>
+</header>
+
+  <!-- Navigation Tabs -->
+  <nav class="top-nav">
+    <a href="#">NEW & FEATURED</a>
+    <a href="#">CATEGORY</a>
+    <a href="#">CHARACTER</a>
+    <a href="#">ACCESSORIES</a>
+    <a href="#">MEGA</a>
+    <a href="#">STORE PICKUP</a>
+    <a href="#">GIFT WITH PURCHASE</a>
+  </nav>
+
+
+
+
+  <main >
+   
+
+    <div class="folly">
+
+   <main class="container-home">
+ 
+
+       <div class="profile-section">
+
+  <!-- Profile Info -->
+  <div class="profile-info">
+    <div class="profile-avatar">
+      <img src="https://img.icons8.com/?size=50&id=7820&format=png" alt="Avatar">
+    </div>
+    <div class="profile-details">
+      <h3 class="username" id="username">iamdotchy1715</h3>
+      <div class="profile-links">
+        <a href="#">EDIT PROFILE</a>
+        <a href="#">ACCOUNT SETTING</a>
+      </div>
+    </div>
+    <a href="#" class="signout">Sign out</a>
+  </div>
+
+  <!-- Membership Card -->
+  <div class="membership-card">
+    <div class="membership-header">
+      <span>POPMART MEMBER</span>
+      <a href="#">EXPLORE ></a>
+    </div>
+    <div class="membership-stats">
+      <div>
+        <h4>0</h4>
+        <p>POINTS</p>
+      </div>
+      <div>
+        <h4>0</h4>
+        <p>COUPONS</p>
+      </div>
+      <div>
+        <h4>0</h4>
+        <p>LUCKY POINTS</p>
+      </div>
+      <div>
+        <h4>0</h4>
+        <p>HINT CARD</p>
+      </div>
+    </div>
+    <div class="membership-actions">
+      <button>Member Card</button>
+      <button>Reward</button>
+    </div>
+  </div>
+
+  <!-- Orders -->
+  <div class="orders-section">
+    <h3>My Orders</h3>
+    <div class="orders-options">
+      <div class="order-item">
+      <img src="https://img.icons8.com/?size=50&id=7820&format=png" alt="Avatar">
+        <p>DELIVERY</p>
+      </div>
+      <div class="order-item">
+      <img src="images/bag.png" alt="Avatar">
+        <p>PICK UP</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Links -->
+  <div class="profile-links-list">
+    <a href="#">Address Book</a>
+    <a href="#">Earned rewards</a>
+  </div>
+
+</div>
+  
+ 
+
+  
+  </main>
+
+
+
+
+  </div>
+
+ <nav class="bottom-nav">
+  <a href="home.html">
+      <img class="nav-icons" src="images/home_outlined.png" alt="">
+      <span class="nav-label">Home</span>
+  </a>
+
+  <a href="categories.html">
+      <img class="nav-icons" src="images/categories.png" alt="">
+      <span class="nav-label">Categories</span>
+  </a>
+  <a href="cart.html">
+      <img class="nav-icons" src="images/bag.png" alt="">
+      <span class="nav-label">MY BAG</span>
+  </a>
+   <a href="profile.html">
+    <img class="nav-icons" src="images/person_filled.png" alt="">
+    <span class="nav-label">Me</span>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script>
+const supabaseUrl = 'https://YOUR_PROJECT_ID.supabase.co';
+const supabaseKey = 'YOUR_ANON_KEY';
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+document.querySelector('.signout').addEventListener('click', async function(e) {
+  e.preventDefault();
+  if (confirm('Are you sure you want to sign out?')) {
+    const { error } = await supabaseClient.auth.signOut();
+    if (error) {
+      alert('Sign out failed: ' + error.message);
+    } else {
+      alert('Signed out successfully!');
+      // Optionally clear localStorage
+      localStorage.removeItem('registeredEmail');
+      window.location.href = 'profile.html';
+    }
+  }
+});
+</script>
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  const email = localStorage.getItem('registeredEmail');
+  if (email) {
+    // Replace the username wherever it appears
+    const usernameElem = document.getElementById('username');
+    if (usernameElem) {
+      usernameElem.textContent = email;
+    }
+  }
+});
+</script>
+
+
+</body>
+</html>
