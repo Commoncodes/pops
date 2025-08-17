@@ -73,7 +73,7 @@
 
   <!-- Social Buttons -->
   <div class="social-buttons">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png" alt="Google">
+    <img id="googleSignIn"  src="https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png" alt="Google">
     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
   </div>
 
@@ -299,6 +299,17 @@
       }, 400);
     });
   });
+
+  document.getElementById('googleSignIn').addEventListener('click', async function() {
+  const { error } = await supabaseClient.auth.signInWithOAuth({
+    provider: 'google',
+    options: {
+      redirectTo: window.location.origin + '/profile-view.html'
+    }
+  });
+  if (error) alert(error.message);
+});
+
 </script>
 
 
