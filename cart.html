@@ -273,8 +273,32 @@
     <h3>Send Bitcoin Payment</h3>
     <p>Wallet Address:</p>
     <div class="wallet-address">xxxxxxxxxxxxxxxxxxx</div>
-    <div id="payment-timer" style="display:none; margin: 1.5rem 0 0.5rem 0; font-size: 1.5rem; font-weight: bold;"></div>
-    <div id="payment-status" style="display:none; color: #888; font-size: 1rem;">Confirming payment...</div>
+   <div style="display: flex; flex-direction: column; align-items: center; margin: 1.5rem 0 0.5rem 0;">
+  <div class="circle-timer">
+    <svg id="progress-ring" width="100" height="100">
+      <circle
+        id="progress-ring-bg"
+        cx="50" cy="50" r="45"
+        stroke="#eee"
+        stroke-width="4"
+        fill="none"
+      />
+      <circle
+        id="progress-ring-circle"
+        cx="50" cy="50" r="45"
+        stroke="#8e8e8e"
+        stroke-width="4"
+        fill="none"
+        stroke-linecap="round"
+        stroke-dasharray="282.743"
+        stroke-dashoffset="0"
+        transform="rotate(-90 50 50)"
+      />
+    </svg>
+    <div id="payment-timer" class="timer-text">05:00</div>
+  </div>
+  <div id="payment-status" style="color: #888; font-size: 1rem; margin-top: 0.7rem; display: none;">Confirming payment...</div>
+</div>
     <button id="payment-sent-btn">I've sent the payment</button>
   </div>
 </div>
@@ -449,21 +473,30 @@ document.getElementById('checkout-btn').addEventListener('click', function(e) {
 });
 
 document.getElementById('payment-sent-btn').addEventListener('click', function() {
-  // Hide the button
   this.style.display = 'none';
 
-  // Show timer and status
   const timerDiv = document.getElementById('payment-timer');
   const statusDiv = document.getElementById('payment-status');
-  timerDiv.style.display = 'block';
+  const ring = document.getElementById('progress-ring-circle');
   statusDiv.style.display = 'block';
 
-  // Set countdown (e.g., 5 minutes = 300 seconds)
-  let timeLeft = 300;
+  // Timer settings
+  let timeLeft = 300; // 5 minutes in seconds
+  const totalTime = 300;
+  const radius = 45;
+  const circumference = 2 * Math.PI * radius;
+  ring.style.strokeDasharray = `${circumference}`;
+  ring.style.strokeDashoffset = 0;
+
   function updateTimer() {
     const min = Math.floor(timeLeft / 60).toString().padStart(2, '0');
     const sec = (timeLeft % 60).toString().padStart(2, '0');
     timerDiv.textContent = `${min}:${sec}`;
+
+    // Update circle
+    const progress = timeLeft / totalTime;
+    ring.style.strokeDashoffset = `${circumference * (1 - progress)}`;
+
     if (timeLeft > 0) {
       timeLeft--;
       setTimeout(updateTimer, 1000);
