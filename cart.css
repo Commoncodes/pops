@@ -589,7 +589,7 @@ body {
   left: 0;
   right: 0;
   bottom: -100%;
-  background: rgba(255,255,255,0.98);
+  background: rgba(0, 0, 0, 0.272);
   box-shadow: 0 -2px 16px rgba(0,0,0,0.15);
   transition: bottom 0.4s cubic-bezier(.4,0,.2,1);
   z-index: 9999;
@@ -632,6 +632,28 @@ body {
   font-size: 1rem;
   cursor: pointer;
   width: 100%;
+}
+
+.circle-timer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0.5rem;
+}
+#progress-ring {
+  position: absolute;
+  top: 0; left: 0;
+}
+.timer-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 
