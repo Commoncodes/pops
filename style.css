@@ -84,6 +84,145 @@ body {
   margin-left: 16px;
 }
 
+
+/* Mobile Side Menu Modal */
+.mobile-menu-modal {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 2000;
+  transition: left 0.4s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.mobile-menu-modal.active {
+  left: 0;
+}
+.close-mobile-menu {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #222;
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+.mobile-menu-nav {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 2rem;
+  gap: 2rem;
+}
+.mobile-menu-nav a {
+  font-size: 1.3rem;
+  color: #222;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/****** SIDE BAR START  *****/
+
+
+ .sidebar {
+      width: 100%;
+      max-width: 350px;
+      background: #fff;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      border-right: 1px solid #eee;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+    }
+
+    .sidebar .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar .top-section a {
+      font-weight: 500;
+      
+    }
+
+    .top-section a{
+      color: #000;
+      text-decoration: none;
+    }
+
+    .sidebar .close {
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Menu items */
+    .menu-item {
+      padding: 0px 0;
+      border-bottom: 1px solid #f2f2f2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      width: 100%;
+      height: 100%;
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    /* Lower section */
+    .lower-section {
+      margin-top: 80px;
+      width: 100%;
+
+    }
+
+    .lower-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 14px;
+
+    }
+
+    .lower-item:last-child {
+      border-bottom: none;
+    }
+
+    .lower-item i {
+      font-size: 18px;
+    }
+
+    .flag {
+      width: 20px;
+      height: 14px;
+    }
+
+
+
+/******  END  ******/
+
 .nav-icons{
   width: 24px;
   height: 24px;
@@ -1105,7 +1244,7 @@ color: #fff;
 }
 
 .bottom-nav .nav-label {
-  margin-top: 2px;
+  margin-top: 4px;
   font-size: 0.72rem;
   color: #444;
   letter-spacing: 0.01em;
@@ -1532,12 +1671,13 @@ color: #fff;
 }
 
 .artist-card h1{
-  font-size: 1.5rem;
+  font-size: 1.0rem;
+  margin-bottom: 1rem;
   
 }
 
 .artist-card p{
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   
 }
 
