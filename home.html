@@ -798,6 +798,31 @@
 
   </div>
 
+  <!-- Mobile Side Menu Modal -->
+<div id="mobileMenu" class="mobile-menu-modal">
+  <button id="closeMobileMenu" class="close-mobile-menu">&times;</button>
+
+    <!-- Top section -->
+    <div class="top-section">
+      <a href="#">👤 Sign in / Register</a>
+    </div>
+
+    <!-- Menu items -->
+    <div class="menu-item">NEW & FEATURED ➝</div>
+    <div class="menu-item">CATEGORIES ➝</div>
+    <div class="menu-item">CHARACTERS ➝</div>
+    <div class="menu-item">STORE PICKUP</div>
+
+    <!-- Lower section -->
+    <div class="lower-section">
+      <div class="lower-item">Chat 🎧</div>
+      <div class="lower-item">Find a Store 🏬</div>
+      <div class="lower-item">Join Community ✉️</div>
+      <div class="lower-item">Switch Regions <img src="https://flagcdn.com/w20/us.png" alt="US Flag" class="flag"></div>
+    </div>
+  
+</div>
+
  <nav class="bottom-nav">
   <a href="home.html">
       <img class="nav-icons" src="images/home_filled.png" alt="">
@@ -1306,5 +1331,21 @@ function viewProduct(el) {
   window.location.href = 'products_info.html';
 }
 </script>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+hamburger.addEventListener('click', function() {
+  mobileMenu.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevent background scroll
+});
+closeMobileMenu.addEventListener('click', function() {
+  mobileMenu.classList.remove('active');
+  document.body.style.overflow = ''; // Restore scroll
+});
+</script>
+
 </body>
 </html>
