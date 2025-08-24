@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Mart Store Locator</title>
+      <link rel="stylesheet" href="store.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">POP MART</div>
+                
+                <!-- Navigation Icons -->
+                <div class="nav-icons">
+                    <button class="nav-button">
+                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m2.6 8L6 5H2m5 8v6a2 2 0 002 2h6a2 2 0 002-2v-6"/>
+                        </svg>
+                    </button>
+                    <button class="nav-button">
+                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Map Section -->
+        <section class="section">
+            <div class="container">
+                <div class="map-container">
+                    <!-- Map Background -->
+                    <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?w=1200&h=800&fit=crop" alt="Pop Mart Store Locations Map" class="map-image">
+                    
+                    <!-- Store Location Markers -->
+                    <div class="store-marker" style="top: 25%; left: 8%;">
+                        <div class="marker-circle">9</div>
+                        <div class="marker-tooltip">9 stores in West Coast</div>
+                    </div>
+                    
+                    <div class="store-marker" style="top: 30%; left: 50%;">
+                        <div class="marker-circle">2</div>
+                        <div class="marker-tooltip">2 stores in Midwest</div>
+                    </div>
+                    
+                    <div class="store-marker" style="top: 35%; left: 55%;">
+                        <div class="marker-circle">9</div>
+                        <div class="marker-tooltip">9 stores in Central</div>
+                    </div>
+                    
+                    <div class="store-marker" style="top: 40%; left: 75%;">
+                        <div class="marker-circle">24</div>
+                        <div class="marker-tooltip">24 stores in East Coast</div>
+                    </div>
+                    
+                    <div class="store-marker" style="top: 45%; left: 15%;">
+                        <div class="marker-circle">11</div>
+                        <div class="marker-tooltip">11 stores in Southwest</div>
+                    </div>
+                    
+                    <div class="store-marker" style="top: 55%; left: 20%;">
+                        <div class="marker-circle">31</div>
+                        <div class="marker-tooltip">31 stores in California</div>
+                    </div>
+                    
+                    <div class="store-marker" style="top: 60%; left: 25%;">
+                        <div class="marker-circle">2</div>
+                        <div class="marker-tooltip">2 stores in Southwest</div>
+                    </div>
+                    
+                    <div class="store-marker" style="top: 50%; left: 45%;">
+                        <div class="marker-circle">6</div>
+                        <div class="marker-tooltip">6 stores in Texas</div>
+                    </div>
+                    
+                    <!-- Google Attribution -->
+                    <div class="map-attribution">
+                        <span style="color: #2563eb; font-weight: bold;">Google</span>
+                        <span>Map data ©2025 Google, INEGI</span>
+                        <a href="#">Terms</a>
+                    </div>
+                    
+                    <!-- Map Controls -->
+                    <div class="map-controls">
+                        <button class="map-control-button">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 2V14M2 8H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <h2 class="search-title">LOCATE A STORE</h2>
+                    
+                    <div class="search-input-container">
+                        <input type="text" placeholder="SEARCH" class="search-input">
+                        <button class="search-button">
+                            <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stores Showcase -->
+        <section class="showcase-section">
+            <div class="container">
+                <h2 class="showcase-title">OUR STORES</h2>
+                
+                <div class="showcase-grid">
+                    <!-- Featured Store -->
+                    <div class="featured-store">
+                        <div class="store-image-container">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop" alt="Pop Mart Store Interior" class="store-image">
+                            
+                            <!-- Store branding overlay -->
+                            <div class="store-overlay">
+                                <div class="store-branding">
+                                    <div class="store-branding-text">POP MART</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Store Info Cards -->
+                    <div class="info-cards">
+                        <div class="info-card info-card-red">
+                            <h3 class="info-card-title">Find Your Nearest Store</h3>
+                            <p class="info-card-text">Discover the latest collectibles and exclusive releases at your local Pop Mart store.</p>
+                        </div>
+                        
+                        <div class="info-card info-card-gray">
+                            <h3 class="info-card-title">Store Features</h3>
+                            <ul class="info-list">
+                                <li>• Exclusive collectibles</li>
+                                <li>• Limited edition releases</li>
+                                <li>• Interactive displays</li>
+                                <li>• Expert assistance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-title">POP MART</div>
+                <p class="footer-subtitle">Discover. Collect. Connect.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add basic interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchInput = document.querySelector('.search-input');
+            const searchButton = document.querySelector('.search-button');
+            
+            searchButton.addEventListener('click', function() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    alert('Searching for stores near: ' + searchTerm);
+                    // Here you would implement actual search functionality
+                }
+            });
+            
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchButton.click();
+                }
+            });
+            
+            // Store marker click functionality
+            const storeMarkers = document.querySelectorAll('.store-marker');
+            storeMarkers.forEach(marker => {
+                marker.addEventListener('click', function() {
+                    const tooltip = this.querySelector('.marker-tooltip');
+                    alert(tooltip.textContent);
+                    // Here you would implement store details functionality
+                });
+            });
+        });
+    </script>
+</body>
+</html>
