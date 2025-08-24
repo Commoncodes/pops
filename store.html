@@ -5,32 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pop Mart Store Locator</title>
       <link rel="stylesheet" href="store.css">
+            <link rel="stylesheet" href="style.css">
+                        <link rel="stylesheet" href="cart.css">
+
+
+
 
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="header-container">
-            <div class="header-content">
-                <!-- Logo -->
-                <div class="logo">POP MART</div>
-                
-                <!-- Navigation Icons -->
-                <div class="nav-icons">
-                    <button class="nav-button">
-                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m2.6 8L6 5H2m5 8v6a2 2 0 002 2h6a2 2 0 002-2v-6"/>
-                        </svg>
-                    </button>
-                    <button class="nav-button">
-                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+     <!-- Navbar -->
+  <!-- Navbar -->
+<header class="navbar">
+  <span class="search-icon" aria-label="Search">🔍</span>
+  <input type="text" class="search-bar" placeholder="LABUBU">
+  <div class="logo" onclick="location.href='home.html'">POP MART</div>
+  <div class="icons">
+    <img class="nav-icons" src="images/customerService.webp" alt="">
+    <img class="nav-icons" src="images/headerUserIcon2.png" alt="">
+    <img class="nav-icons" src="images/heart_circle.png" alt="">
+    <img class="nav-icons cart" src="images/bag.png" alt="">
+  
+  </div>
+  
+        <div class="cart-box">
+                <img class="cart" src="images/bag.png" alt="">
+                        <span id="cart-badge" style="display:none; background:rgb(3, 3, 3);color:#fff;border-radius:50%;padding:2px 5px;font-size:8px; width: 16px; height: 16px;">1</span>
+
         </div>
-    </header>
+
+  <button class="hamburger" aria-label="Open menu">&#9776;</button>
+</header>
+
+
 
     <main class="main">
         <!-- Map Section -->
@@ -127,48 +134,451 @@
                     <!-- Featured Store -->
                     <div class="featured-store">
                         <div class="store-image-container">
-                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop" alt="Pop Mart Store Interior" class="store-image">
+                            <img src="images/stores/store1.WEBP" class="store-image">
                             
-                            <!-- Store branding overlay -->
-                            <div class="store-overlay">
-                                <div class="store-branding">
-                                    <div class="store-branding-text">POP MART</div>
-                                </div>
+                           
+                        </div>
+                    </div>
+
+                     <div class="store-info">
+                        <!-- Store Name -->
+                        <h3 class="store-name">Stonebriar Centre POP UP</h3>
+                        
+                        <!-- Address -->
+                        <p class="store-address">Space#2020, 2601 Preston Rd, Frisco, TX 75034</p>
+                        
+                        <!-- Phone -->
+                        <p class="store-phone">Tel: 1-9453135482</p>
+                        
+                        <!-- Store Hours -->
+                        <div class="store-hours">
+                            <div class="hours-row">
+                                <span class="day-label">MON</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">TUE</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">WED</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">THU</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">FRI</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SAT</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SUN</span>
+                                <span class="hours-time">12:00-18:00</span>
                             </div>
                         </div>
+                        
+                        <!-- Store ID -->
+                        <p class="store-id">Store ID: stonebriar_popmart</p>
                     </div>
-                    
-                    <!-- Store Info Cards -->
-                    <div class="info-cards">
-                        <div class="info-card info-card-red">
-                            <h3 class="info-card-title">Find Your Nearest Store</h3>
-                            <p class="info-card-text">Discover the latest collectibles and exclusive releases at your local Pop Mart store.</p>
+
+                     <!-- Featured Store -->
+                    <div class="featured-store">
+                        <div class="store-image-container">
+                            <img src="images/stores/store3.WEBP" class="store-image">
+                            
+                           
+                        </div>
+                    </div>
+
+                     <div class="store-info">
+                        <!-- Store Name -->
+                        <h3 class="store-name">Stonebriar Centre POP UP</h3>
+                        
+                        <!-- Address -->
+                        <p class="store-address">Space#2020, 2601 Preston Rd, Frisco, TX 75034</p>
+                        
+                        <!-- Phone -->
+                        <p class="store-phone">Tel: 1-9453135482</p>
+                        
+                        <!-- Store Hours -->
+                        <div class="store-hours">
+                            <div class="hours-row">
+                                <span class="day-label">MON</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">TUE</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">WED</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">THU</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">FRI</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SAT</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SUN</span>
+                                <span class="hours-time">12:00-18:00</span>
+                            </div>
                         </div>
                         
-                        <div class="info-card info-card-gray">
-                            <h3 class="info-card-title">Store Features</h3>
-                            <ul class="info-list">
-                                <li>• Exclusive collectibles</li>
-                                <li>• Limited edition releases</li>
-                                <li>• Interactive displays</li>
-                                <li>• Expert assistance</li>
-                            </ul>
+                        <!-- Store ID -->
+                        <p class="store-id">Store ID: stonebriar_popmart</p>
+                    </div>
+
+                     <!-- Featured Store -->
+                    <div class="featured-store">
+                        <div class="store-image-container">
+                            <img src="images/stores/store4.WEBP" class="store-image">
+                            
+                           
                         </div>
                     </div>
+
+                     <div class="store-info">
+                        <!-- Store Name -->
+                        <h3 class="store-name">Stonebriar Centre POP UP</h3>
+                        
+                        <!-- Address -->
+                        <p class="store-address">Space#2020, 2601 Preston Rd, Frisco, TX 75034</p>
+                        
+                        <!-- Phone -->
+                        <p class="store-phone">Tel: 1-9453135482</p>
+                        
+                        <!-- Store Hours -->
+                        <div class="store-hours">
+                            <div class="hours-row">
+                                <span class="day-label">MON</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">TUE</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">WED</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">THU</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">FRI</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SAT</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SUN</span>
+                                <span class="hours-time">12:00-18:00</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Store ID -->
+                        <p class="store-id">Store ID: stonebriar_popmart</p>
+                    </div>
+
+                     <!-- Featured Store -->
+                    <div class="featured-store">
+                        <div class="store-image-container">
+                            <img src="images/stores/store5.WEBP" class="store-image">
+                            
+                           
+                        </div>
+                    </div>
+
+                     <div class="store-info">
+                        <!-- Store Name -->
+                        <h3 class="store-name">Stonebriar Centre POP UP</h3>
+                        
+                        <!-- Address -->
+                        <p class="store-address">Space#2020, 2601 Preston Rd, Frisco, TX 75034</p>
+                        
+                        <!-- Phone -->
+                        <p class="store-phone">Tel: 1-9453135482</p>
+                        
+                        <!-- Store Hours -->
+                        <div class="store-hours">
+                            <div class="hours-row">
+                                <span class="day-label">MON</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">TUE</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">WED</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">THU</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">FRI</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SAT</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SUN</span>
+                                <span class="hours-time">12:00-18:00</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Store ID -->
+                        <p class="store-id">Store ID: stonebriar_popmart</p>
+                    </div>
+
+                     <!-- Featured Store -->
+                    <div class="featured-store">
+                        <div class="store-image-container">
+                            <img src="images/stores/store6.WEBP" class="store-image">
+                            
+                           
+                        </div>
+                    </div>
+
+                     <div class="store-info">
+                        <!-- Store Name -->
+                        <h3 class="store-name">Stonebriar Centre POP UP</h3>
+                        
+                        <!-- Address -->
+                        <p class="store-address">Space#2020, 2601 Preston Rd, Frisco, TX 75034</p>
+                        
+                        <!-- Phone -->
+                        <p class="store-phone">Tel: 1-9453135482</p>
+                        
+                        <!-- Store Hours -->
+                        <div class="store-hours">
+                            <div class="hours-row">
+                                <span class="day-label">MON</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">TUE</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">WED</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">THU</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">FRI</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SAT</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SUN</span>
+                                <span class="hours-time">12:00-18:00</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Store ID -->
+                        <p class="store-id">Store ID: stonebriar_popmart</p>
+                    </div>
+
+                     <!-- Featured Store -->
+                    <div class="featured-store">
+                        <div class="store-image-container">
+                            <img src="images/stores/store7.WEBP" class="store-image">
+                            
+                           
+                        </div>
+                    </div>
+
+                     <div class="store-info">
+                        <!-- Store Name -->
+                        <h3 class="store-name">Stonebriar Centre POP UP</h3>
+                        
+                        <!-- Address -->
+                        <p class="store-address">Space#2020, 2601 Preston Rd, Frisco, TX 75034</p>
+                        
+                        <!-- Phone -->
+                        <p class="store-phone">Tel: 1-9453135482</p>
+                        
+                        <!-- Store Hours -->
+                        <div class="store-hours">
+                            <div class="hours-row">
+                                <span class="day-label">MON</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">TUE</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">WED</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">THU</span>
+                                <span class="hours-time">10:00-20:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">FRI</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SAT</span>
+                                <span class="hours-time">10:00-21:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day-label">SUN</span>
+                                <span class="hours-time">12:00-18:00</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Store ID -->
+                        <p class="store-id">Store ID: stonebriar_popmart</p>
+                    </div>
+                    
+                   
                 </div>
             </div>
         </section>
     </main>
     
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-title">POP MART</div>
-                <p class="footer-subtitle">Discover. Collect. Connect.</p>
-            </div>
+    <div class="footer">
+    <div class="social-box">
+      <div class="follow-box">
+        <h2>FOLLOW US ON</h2>
+       <div class="social-icons">
+        <a href="#"><img src="images/instagram.png" alt="Facebook"></a>
+        <a href="#"><img src="images/facebook.png" alt="Twitter"></a>
+        <a href="#"><img src="images/tiktok.png" alt="Instagram"></a>
+       </div>
+      </div>
+    
+      <div class="social-apps">
+        <a href="#"><img src="images/Android_new.png" alt="Twitter"></a>
+        <a href="#"><img src="images/ios.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-contents">
+      <div class="join">
+        <h3>
+          JOIN THE COMMUNITY
+        </h3>
+
+        <p>
+        Be the first to receive our new releases, special offers and more
+        </p>
+          <input type="text" placeholder="Your email address">
+           <h4>
+          CONTACT US
+        </h4>
+        <div class="contact-box">
+          <div class="box1">
+            <h5>Chat</h5>
+            <p style="margin-bottom: 0rem;">Monday - Sunday 8:00am - 2:00am PDT</p>
+          </div>
+          <div class="box2">
+                        <p>Chat with us</p>
+
+          </div>
         </div>
-    </footer>
+
+        <div class="contact-box">
+           <div class="box1">
+            <h5>Email</h5>
+            <p style="margin-bottom: 0rem;">na.support@popmart.com</p>
+          </div>
+          <div class="box2">
+                        <p>Email us</p>
+
+          </div>
+        </div>
+
+        <div class="country-box">
+          <p style="padding: 0rem; margin: 0rem;">CHANGE COUNTRY/REGION</p>
+        </div>
+
+
+      </div>
+
+      <div class="links-box">
+          <div class="support">
+        <h3>SUPPORT</h3>
+        <p>FAQ</p>
+         <p>SHIPPING INFO</p>
+         <p>PRIVACY POLICY</p>
+         <p>TRACK YOUR ORDER</p>
+          <p>FIND A STORE</p>
+           <p>RETURNS</p>
+            <p>POP BLOCK</p>
+             <p>ORDER FAILURE GUIDE</p>
+              <p>EXCHANGE</p>
+               <p>TERMS AND CONDITION</p>
+               <p>AUTHENTICITY CHECK</p>
+      </div>
+      <div class="about">
+        <h3>ABOUT US</h3>
+        <p>NEWS</p>
+         <p>ARTIST</p>
+         <p>ABOUT POPMART</p>
+         <p>INVESTORS RELATIONS</p>
+          <p>CONTACT US</p>
+           <p>CAREERS</p>
+      </div>
+      <div class="shop">
+        <h3>SHOP</h3>
+        
+        <p>LAUNCH CALENDAR</p>
+         <p>TRENDING</p>
+         <p>BLIND BOXES</p>
+         <p>MEGA COLLECTION</p>
+          <p>ACCESSORIES</p>
+           
+      </div>
+      </div>
+    
+    </div>
+    
+     <div class="reserved-box">
+      <div class="follow-box">
+       <p>2025 POP MART ALL RIGHTS RESERVED</p>
+       </div>
+
+
+        <div class="social-apps">
+        <a href="#"><img src="images/mastercard.png" alt="master"></a>
+        <a href="#"><img src="images/visa.png" alt="visa"></a>
+      </div>
+      </div>
+    
+     
+    </div>
 
     <script>
         // Add basic interactivity
