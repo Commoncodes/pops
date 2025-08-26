@@ -63,7 +63,7 @@
       <h3 class="username" id="username">iamdotchy1715</h3>
       <div class="profile-links">
         <a href="#">EDIT PROFILE</a>
-        <a href="#">ACCOUNT SETTING</a>
+        <a href="account_settings.html">ACCOUNT SETTING</a>
       </div>
     </div>
     <a href="#" class="signout">Sign out</a>
@@ -73,7 +73,7 @@
   <div class="membership-card">
     <div class="membership-header">
       <span>POPMART MEMBER</span>
-      <a href="#">EXPLORE ></a>
+      <a href="shop.html">EXPLORE ></a>
     </div>
     <div class="membership-stats">
       <div>
@@ -122,9 +122,6 @@
 
 </div>
   
- 
-
-  
   </main>
 
 
@@ -150,6 +147,102 @@
     <img class="nav-icons" src="images/person_filled.png" alt="">
     <span class="nav-label">Me</span>
 </nav>
+
+
+<!--     EDIT  PROFILE   MODAL   -->
+
+<div id="editProfileModal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="close-modal" aria-label="Close">&times;</button>
+    <h2 class="modal-title">MANAGE ACCOUNT</h2>
+    <form class="profile-form">
+      <label for="nickname">Nickname</label>
+      <input type="text" id="nickname" name="nickname" value="poppy">
+
+      <label for="profile-picture">Profile Picture</label>
+      <div class="profile-pic-preview">
+        <img src="https://img.icons8.com/?size=50&id=7820&format=png" alt="Profile Picture" id="profile-pic-img">
+      </div>
+
+      <label for="mobile">Mobile number <span class="points">+2Points</span></label>
+      <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile phone number">
+
+      <label for="birthday">Birthday <span class="perks">To unlock birthday perks</span></label>
+      <input type="date" id="birthday" name="birthday">
+
+      <label for="gender">Gender <span class="points">+2Points</span></label>
+      <select id="gender" name="gender">
+        <option value="">choose</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <button type="submit" class="save-profile-btn">SAVE PROFILE</button>
+    </form>
+  </div>
+</div>
+
+
+
+<div id="memberCardModal" class="modal-overlay">
+  <div class="modal-content member-card-modal-content">
+    <button class="close-modal" aria-label="Close">&times;</button>
+    <h2 class="modal-title">Member Card</h2>
+    <div class="member-card-container">
+      <div class="member-card-info">
+        <div class="member-card-details">
+          <div>Phone Number:1048742819852****5116</div>
+          <div>Email:e***@gmail.com</div>
+          <div>Member NO: 0432954858</div>
+        </div>
+        <div class="member-card-qr">
+          <!-- Replace src with your dynamic QR if needed -->
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=POP-MART-MEMBER" alt="QR Code">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal for MY REWARDS (Image 4) -->
+<div id="myRewardsModal" class="modal-overlay">
+  <div class="modal-content my-rewards-modal-content">
+    <div class="rewards-header">
+      <span class="back-arrow">&#8592;</span>
+      <h2 class="modal-title">MY REWARDS</h2>
+    </div>
+    <div class="rewards-points-section">
+      <span class="rewards-points">0</span>
+      <span class="rewards-points-label">Points</span>
+    </div>
+    <div class="rewards-section">
+      <h3 class="rewards-section-title">Member Rewards</h3>
+      <div class="rewards-grid">
+        <div class="reward-card">
+          <img src="https://imgur.com/your-magazine-image.png" alt="play/GROUND Magazine" class="reward-img">
+          <div class="reward-desc">[Online Delivery Only] play/GROUND Magazine...</div>
+          <a href="#" class="reward-details-link">view details</a>
+          <div class="reward-points">199 Points</div>
+          <div class="reward-out">OUT OF STOCK</div>
+        </div>
+        <div class="reward-card">
+          <img src="https://imgur.com/your-monster-image.png" alt="POP BEAN THE MONSTERS" class="reward-img">
+          <div class="reward-desc">[Online Delivery Only] POP BEAN THE MONSTERS...</div>
+          <a href="#" class="reward-details-link">view details</a>
+          <div class="reward-points">139 Points</div>
+          <div class="reward-out">OUT OF STOCK</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
@@ -187,6 +280,69 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+
+
+<script>
+  // ...existing code...
+document.querySelector('.profile-links a').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('editProfileModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+});
+document.querySelector('.close-modal').addEventListener('click', function() {
+  document.getElementById('editProfileModal').classList.remove('active');
+  document.body.style.overflow = '';
+});
+// ...existing code...
+</script>
+
+
+<script>
+  // Add to your existing modal JS
+
+const memberCardBtn = document.querySelector('.membership-actions button'); // or the correct selector for "Member Card"
+const memberCardModal = document.getElementById('memberCardModal');
+const closeMemberCardBtn = memberCardModal.querySelector('.close-modal');
+
+memberCardBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  memberCardModal.classList.add('active');
+});
+
+closeMemberCardBtn.addEventListener('click', function() {
+  memberCardModal.classList.remove('active');
+});
+
+// Optional: Dismiss modal by clicking outside
+memberCardModal.addEventListener('click', function(e) {
+  if (e.target === memberCardModal) {
+    memberCardModal.classList.remove('active');
+  }
+});
+</script>
+
+<script>
+  // JS for opening/closing MY REWARDS modal
+
+const myRewardsBtn = document.querySelector('.membership-actions button:last-child'); // Adjust selector if needed
+const myRewardsModal = document.getElementById('myRewardsModal');
+const closeMyRewardsBtn = myRewardsModal.querySelector('.close-modal');
+
+myRewardsBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  myRewardsModal.classList.add('active');
+});
+
+closeMyRewardsBtn.addEventListener('click', function() {
+  myRewardsModal.classList.remove('active');
+});
+
+myRewardsModal.addEventListener('click', function(e) {
+  if (e.target === myRewardsModal) {
+    myRewardsModal.classList.remove('active');
+  }
+});
+</script>
 
 </body>
 </html>
