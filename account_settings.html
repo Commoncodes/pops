@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POP MART</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="account_settings.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+<header class="navbar">
+  <span class="search-icon" aria-label="Search">🔍</span>
+  <input type="text" class="search-bar" placeholder="DISNEY">
+  <div class="logo" onclick="window.location.href='home.html'">POP MART</div>
+  <div class="icons">
+    <span>🛒</span>
+    <span>❤️</span>
+    <span>👤</span>
+  </div>
+  <button class="hamburger" aria-label="Open menu">&#9776;</button>
+</header>
+
+  <!-- Navigation Tabs -->
+  <nav class="top-nav">
+    <a href="#">New & Featured</a>
+    <a href="#">Category</a>
+    <a href="#">Character</a>
+    <a href="#">Accessories</a>
+    <a href="#">Mega</a>
+    <a href="#">Store Pickup</a>
+  </nav>
+
+  <!-- Filter and Products Section -->
+  <main class="container">
+    <aside class="sidebar">
+      <h3>Category</h3>
+      <label><input type="checkbox"> Blind Boxes</label>
+      <label><input type="checkbox"> Plush Toys</label>
+      <label><input type="checkbox"> Phone Accessories</label>
+      <label><input type="checkbox"> Bags</label>
+      <label><input type="checkbox"> Chain Blind Box</label>
+    </aside>
+
+   
+
+    <div id="accountSettingsModal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="cont-modal-title">
+        <h2 class="modal-title">ACCOUNT SETTINGS</h2>
+    </div>
+    
+    <div class="account-section email-section">
+      <div class="email-box">
+        <strong>Email</strong>
+        <div class="email-masked">e***@gmail.com</div>
+        <div class="email-status">Bound</div>
+      </div>
+    </div>
+
+    <div class="account-section">
+      <h3 class="section-title">Subscribe</h3>
+      <label class="toggle-switch">
+        <input type="checkbox" id="newsletterSwitch">
+        <span class="slider"></span>
+      </label>
+      <span class="newsletter-label">Show me newsletter, promotions, events from POP MART via email.</span>
+    </div>
+
+    <div class="account-section">
+      <h3 class="section-title">Linked accounts</h3>
+      <button class="account-btn google-btn">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAzFBMVEVHcEz////////+/v77+/vx8fL9/f309fX+/v739/f////09PXOz8/5+vr8/P3////////29vf///////84qlf8wAdGiPX8/PzsUUTqQjQsqFLrSj3S3/w6g/TqPCs0gPQgpUf85+bv9P+63sL62Nb+8ef4ycbw+PJkunkeePP81HXwgGv0jhzc5/3o9efX7N5Fr19Uj/WQy562zPr2trL94KDzoJrzoJv80Gjyl5H94qgyh9v7xzihsSp+wYV1sE5ZtXBmmvUynoWKrvzKDGT6AAAAE3RSTlMAW+TTeBLcHLMt1WsKzfUznkBIxSDAuAAAAUZJREFUKJFtktligkAMRUFZxKVuDMOAggpu1apVu+/t//9TkxBU1PsySQ4hlyGadpTd0fWOrV2R3eqyWhe80j1RpYCc7pmcI2tyaZimQw6bOTMplU9hpKIofJSUmgwtTCYq9EFhqKIJ5lbGdGIRAGhUQLNX6wRLOA2Y8vdpuvfVOJtaOjhdhL56yYrjU8cGFsRSLc4/x+DPfxBiSZN6LMlXUYXzVghBT8/7pPkdxFX28yzEO8HYI8U9dlQudMZx3AeInWWe+SrExxrhCLTre3E+M3P7FXznLn887z53a2PwGbjBLLvUP2jcYUC/FYdOA9d1g22SbN1fbizT9bUxXA+QguB4G2GlfbIFqw1i0GCzKmzDDQ1LZgPQLKHk5rAJpmSj0ykH0jxArW4V79yqF1bMkEckjYvFrTWIy0btApFsx7m68Ff1D4OdMHbngtKsAAAAAElFTkSuQmCC" alt="Google" class="icon"> Disconnect Google Account
+      </button>
+      <button class="account-btn apple-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="icon"> Connect Apple Account
+      </button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="account-section">
+      <h3 class="section-title">Delete account</h3>
+      <div class="delete-desc">
+        You can exit the POP MART membership at any time, deleting your profile and the information associated with it.<br>
+        <span class="danger-text">NOTE: Account will NOT BE RECOVERABLE once deleted.</span>
+      </div>
+    </div>
+
+    <div class="account-section">
+      <h3 class="section-title">Online customer service</h3>
+      <div class="service-desc">
+        Click the customer service icon to start talking with us, using either automated or humain service.<br>
+        7 days a week 09:00 - 18:00
+      </div>
+    </div>
+
+    <div class="account-section">
+      <h3 class="section-title">Email service</h3>
+      <div class="email-service-desc">
+        Please contact us at <a href="mailto:na.support@popmart.com">na.support@popmart.com</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+   <div class="footer">
+    <div class="social-box">
+      <div class="follow-box">
+        <h2>FOLLOW US ON</h2>
+       <div class="social-icons">
+        <a href="#"><img src="images/instagram.png" alt="Facebook"></a>
+        <a href="#"><img src="images/facebook.png" alt="Twitter"></a>
+        <a href="#"><img src="images/tiktok.png" alt="Instagram"></a>
+       </div>
+      </div>
+    
+      <div class="social-apps">
+        <a href="#"><img src="images/Android_new.png" alt="Twitter"></a>
+        <a href="#"><img src="images/ios.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-contents">
+      <div class="join">
+        <h3>
+          JOIN THE COMMUNITY
+        </h3>
+
+        <p>
+        Be the first to receive our new releases, special offers and more
+        </p>
+          <input type="text" placeholder="Your email address">
+           <h4>
+          CONTACT US
+        </h4>
+        <div class="contact-box">
+          <div class="box1">
+            <h5>Chat</h5>
+            <p style="margin-bottom: 0rem;">Monday - Sunday 8:00am - 2:00am PDT</p>
+          </div>
+          <div class="box2">
+                        <p>Chat with us</p>
+
+          </div>
+        </div>
+
+        <div class="contact-box">
+           <div class="box1">
+            <h5>Email</h5>
+            <p style="margin-bottom: 0rem;">na.support@popmart.com</p>
+          </div>
+          <div class="box2">
+                        <p>Email us</p>
+
+          </div>
+        </div>
+
+        <div class="country-box">
+          <p style="padding: 0rem; margin: 0rem;">CHANGE COUNTRY/REGION</p>
+        </div>
+
+
+      </div>
+
+      <div class="links-box">
+          <div class="support">
+        <h3>SUPPORT</h3>
+        <p>FAQ</p>
+         <p>SHIPPING INFO</p>
+         <p>PRIVACY POLICY</p>
+         <p>TRACK YOUR ORDER</p>
+          <p>FIND A STORE</p>
+           <p>RETURNS</p>
+            <p>POP BLOCK</p>
+             <p>ORDER FAILURE GUIDE</p>
+              <p>EXCHANGE</p>
+               <p>TERMS AND CONDITION</p>
+               <p>AUTHENTICITY CHECK</p>
+      </div>
+      <div class="about">
+        <h3>ABOUT US</h3>
+        <p>NEWS</p>
+         <p>ARTIST</p>
+         <p>ABOUT POPMART</p>
+         <p>INVESTORS RELATIONS</p>
+          <p>CONTACT US</p>
+           <p>CAREERS</p>
+      </div>
+      <div class="shop">
+        <h3>SHOP</h3>
+        
+        <p>LAUNCH CALENDAR</p>
+         <p>TRENDING</p>
+         <p>BLIND BOXES</p>
+         <p>MEGA COLLECTION</p>
+          <p>ACCESSORIES</p>
+           
+      </div>
+      </div>
+    
+    </div>
+    
+     <div class="reserved-box">
+      <div class="follow-box">
+       <p>2025 POP MART ALL RIGHTS RESERVED</p>
+       </div>
+
+
+        <div class="social-apps">
+        <a href="#"><img src="images/mastercard.png" alt="master"></a>
+        <a href="#"><img src="images/visa.png" alt="visa"></a>
+      </div>
+      </div>
+    
+     
+    </div>
+
+</body>
+</html>
