@@ -155,3 +155,514 @@
   color: #333;
   font-size: 14px;
 }
+
+
+/* Add this to your profile-view.css or a new CSS file */
+/* Modal base styles */
+.modal-overlay {
+  position: fixed;
+  left: 0; right: 0; top: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.35);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Modal visible state */
+.modal-overlay.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* Modal content slides up from bottom */
+.modal-content {
+  background: #fff;
+  width: 100vw;
+  max-width: 500px;
+  border-radius: 0 0 0 0;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px 24px 24px;
+  position: relative;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(.4,1.6,.6,1);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
+}
+
+/* Close button styles */
+.close-modal {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* Modal title */
+.modal-title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 26px;
+  letter-spacing: 1px;
+}
+
+.profile-form label {
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 4px;
+  display: block;
+  color: #000;
+  font-size: 1em;
+}
+
+.profile-form input[type="text"], 
+.profile-form input[type="date"],
+.profile-form select {
+  width: 100%;
+  padding: 11px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  
+  font-size: 1em;
+  background: #fafafa;
+}
+
+.profile-form .profile-pic-preview {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.profile-form .profile-pic-preview img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.points {
+  color: #dfa000;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.perks {
+  color: #dfa000;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.save-profile-btn {
+  margin-top: 24px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 16px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+
+/* ACCOUNT SETTINGS MODAL */
+
+#accountSettingsModal .modal-content {
+  max-width: 500px;
+  min-height: 85vh;
+  padding-bottom: 26px;
+}
+
+.email-section .email-box {
+  background: #f8f8f8;
+  border-radius: 5px;
+  padding: 20px 16px 14px 16px;
+  margin-bottom: 24px;
+}
+
+.email-box strong {
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+.email-masked {
+  color: #888;
+  font-size: 0.7rem;
+  margin-bottom: 2px;
+}
+.email-status {
+  color: #bbb;
+  font-size: 0.7em;
+}
+
+.account-section {
+  margin-bottom: 26px;
+}
+
+.account-section button {
+ font-size: 1rem;
+}
+
+
+
+.section-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 9px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 4px;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  background-color: #f2f2f2;
+  border-radius: 32px;
+  transition: 0.4s;
+  border: 2px solid #ddd;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 5px;
+  bottom: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+.toggle-switch input:checked + .slider {
+  background-color: #ffd600;
+  border-color: #ffd600;
+}
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+.newsletter-label {
+  font-size: 0.8rem;
+  color: #444;
+  vertical-align: middle;
+}
+
+.account-btn {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  
+  font-weight: 500;
+  padding: 8px 0;
+  border-radius: 32px;
+  margin-bottom: 13px;
+  border: 2px solid #000;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  background: #fff;
+  cursor: pointer;
+}
+.account-btn .icon {
+  height: 18x; width: 18px;
+  margin-right: 10px;
+  font-size: 0.6rem;
+}
+
+
+.google-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  font-size: 0.6rem;
+}
+.google-btn:hover {
+  background: #333;
+}
+.apple-btn {
+  background: #fff;
+  color: #222;
+}
+.apple-btn:hover {
+  background: #efefef;
+}
+
+.divider {
+  border-top: 2px solid #eee;
+  margin: 24px 0 20px 0;
+}
+
+.delete-desc {
+  font-size: 1.06em;
+  color: #888;
+}
+.danger-text {
+  color: #B00000;
+  font-weight: 600;
+  font-size: 0.98em;
+  display: block;
+  margin-top: 4px;
+}
+
+.service-desc, .email-service-desc {
+  color: #000000;
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+.delete-desc {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+/* MEMBER CARD MODAL */
+
+/* Add to your CSS file, after other modal styles */
+
+.member-card-modal-content {
+  max-width: 540px;
+  min-height: 80vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member-card-modal-content .close-modal {
+  position: absolute;
+  top: 25px;
+  right: 28px;
+  font-size: 2rem;
+  color: #222;
+  background: none;
+  border: none;
+}
+
+.member-card-modal-content .modal-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+  padding: 28px 0 16px 0;
+  border-bottom: 1.5px solid #eee;
+  width: 100%;
+}
+
+.member-card-container {
+  width: 100%;
+  padding: 38px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.member-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.07);
+  padding: 26px 26px 38px 26px;
+  min-width: 80vw;
+  max-width: 400px;
+}
+
+.member-card-details {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: #222;
+  line-height: 1.7;
+}
+
+.member-card-qr img {
+  display: block;
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+
+/* Styling for MY REWARDS modal */
+.my-rewards-modal-content {
+  max-width: 540px;
+  min-height: 80vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+
+
+.my-rewards-modal-content .close-modal {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-size: 2rem;
+  color: #222;
+  background: none;
+  border: none;
+  z-index: 2;
+}
+
+.rewards-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 28px 0 0 0;
+}
+
+.rewards-header .back-arrow {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.my-rewards-modal-content .modal-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 20px;
+  border-bottom: 1.5px solid #eee;
+  width: 100%;
+}
+
+.rewards-points-section {
+
+  width: 100%;
+  background: #f6f6f6;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  margin-bottom: 10px;
+}
+
+.rewards-points {
+  font-size: 1.7rem;
+  font-weight: bold;
+  display: block;
+  color: #000000;
+  margin-bottom: 2px;
+}
+
+.rewards-points-label {
+  font-size: 0.8rem;
+  color: #757575;
+}
+
+.rewards-section {
+  width: 100%;
+  padding: 18px 0 0 0;
+}
+
+.rewards-section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 14px;
+  margin-left: 22px;
+}
+
+.rewards-grid {
+    display: flex;
+  flex-direction: row;
+  gap: 22px;
+  justify-content: space-between;
+}
+
+.reward-card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  width: 100%;
+  padding: 0 0 16px 0;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reward-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 8px;
+}
+
+.reward-desc {
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 6px 8px 7px 8px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.reward-details-link {
+  color: #444;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  text-decoration: underline;
+}
+
+.reward-points {
+  color: #ab8b44;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.reward-out {
+  color: #bbb;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.rewards-header .modal-title{
+  font-size: 1rem;
+
+}
