@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POP MART</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+<header class="navbar">
+  <span class="search-icon" aria-label="Search">🔍</span>
+  <input type="text" class="search-bar" placeholder="DISNEY">
+  <div class="logo" onclick="window.location.href='home.html'">POP MART</div>
+  <div class="icons">
+    <span>🛒</span>
+    <span>❤️</span>
+    <span>👤</span>
+  </div>
+  <button class="hamburger" aria-label="Open menu">&#9776;</button>
+</header>
+
+  <!-- Navigation Tabs -->
+  <nav class="top-nav">
+    <a href="#">New & Featured</a>
+    <a href="#">Category</a>
+    <a href="#">Character</a>
+    <a href="#">Accessories</a>
+    <a href="#">Mega</a>
+    <a href="#">Store Pickup</a>
+  </nav>
+
+  <!-- Filter and Products Section -->
+  <main class="container">
+    <aside class="sidebar">
+      <h3>Category</h3>
+      <label><input type="checkbox"> Blind Boxes</label>
+      <label><input type="checkbox"> Plush Toys</label>
+      <label><input type="checkbox"> Phone Accessories</label>
+      <label><input type="checkbox"> Bags</label>
+      <label><input type="checkbox"> Chain Blind Box</label>
+    </aside>
+
+    <section class="products">
+      <span class="app-only">APP ONLY</span>
+  
+  <div class="info"  onclick="viewHotProduct(this)">
+    <img src="images/skullpanda/skullpanda1.WEBP" alt="Product 1">
+       <div class="info-text">
+         <p class="name">SKULLPANDA</p>
+         <p class="brand">SKULLPANDA L'impressionnisme Series Plush Doll</p>
+         <p class="price">$27.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  
+  <div class="info" onclick="viewHotProduct(this)">
+    <img src="images/dimoo/dimoo-main.WEBP" alt="Product 2">
+       <div class="info-text">
+         <p class="name">DIMOO</p>
+         <p class="brand">DIMOO WORLD x DISNEY Series-Vinyl Keychain</p>
+         <p class="price">$22.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewHotProduct(this)">
+      <img src="images/bigEnergy/bigEnergy1.WEBP" alt="Product 3">
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTER Big into Energy Vinyl Series</p>
+         <p class="price">$35.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewHotProduct(this)">
+      <img src="images/babyMolly/babymolly1.WEBP" alt="Product 4">
+      <div class="info-text">
+         <p class="name">MOLLY</p>
+         <p class="brand">Baby Molly Pocket Friendly Series-Vinyl</p>
+         <p class="price">$46.90</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewHotProduct(this)">
+      <img src="images/forest/forest1.WEBP" alt="Product 5">
+       <div class="info-text">
+         <p class="name">PUCKY</p>
+         <p class="brand">PUCKY Forest Party Series-Vinyl Pendant</p>
+         <p class="price">$99.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+
+  <div class="info" onclick="viewHotProduct(this)">
+     <img src="images/winter/winter1.WEBP" alt="Product 6">
+      <div class="info-text">
+         <p class="name">SKULLPANDA</p>
+         <p class="brand">SKULLPANDA Winter Symphony Series Plush</p>
+         <p class="price">$119.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span >
+  <div class="info" onclick="viewProduct(this)">
+    <img src="images/dimooCoffee/coffee1.WEBP" alt="Product 1">
+       <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">DIMOO Crush on Coffee Series-Soft-Faced Plush Keychain Blind Box</p>
+         <p class="price">$20.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  
+  <div class="info" onclick="viewProduct(this)">
+    <img src="images/monster_pillow/pillow1.WEBP" alt="Product 2">
+       <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTERS Wacky Mart Series-Pillow(Chips)</p>
+         <p class="price">$200.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/checkmate/checkmate1.WEBP" alt="Product 3">
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTER Let's Checkmate Series-Vinyl Plush Doll</p>
+         <p class="price">$352.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/hanging_card/hanging_card1.WEBP" alt="Product 4">
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTER Let's Checkmate Series-Vinyl Plush Hanging Card</p>
+         <p class="price">$106.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/sketch/sketch1.WEBP" alt="Product 5">
+       <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">MEGA LABUBU 400% Sketch</p>
+         <p class="price">$294.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+
+  <div class="info" onclick="viewProduct(this)">
+     <img src="images/summer_ride/summeride1.WEBP" alt="Product 6">
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">LABUBU Summer Ride Figure</p>
+         <p class="price">$99.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+         <img src="images/winger/Winger1.WEBP" alt="Product 7">
+     <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">LABUBU x PRONOUNCE - WINGS OF FANTASY Vinyl Plush Doll</p>
+         <p class="price">$80.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/exciting/exciting1.WEBP" alt="Product 8">
+       <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTERS - Exciting Macaron Vinyl Face Blind Box</p>
+         <p class="price">$359.90</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/lazy/lazy1.WEBP" alt="Product 9">
+
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">Lazy Yoga Series Figures</p>
+         <p class="price">$50.99</p>   
+      </div>
+   
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/gym/gym1.WEBP" alt="Product 2">
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">LABUBU Rhythmic gymnatics Figure</p>
+         <p class="price">$18.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/happybag/happybag1.WEBP" alt="Product 5">
+     <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">Happy Halloween Party Series- LABUBU Canvas Bag</p>
+         <p class="price">$49.99</p>   
+      </div>
+  </div>
+
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/wild/wild1.WEBP" alt="Product 5">
+     <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTER FALL IN WILD SERIES-Vinyl Plush Doll</p>
+         <p class="price">$19.99</p>   
+      </div>
+  </div>
+
+  <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/dress/dress1.WEBP" alt="Product 5">
+     <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTER - DRESS BE LATTE Vinyl Plush Doll</p>
+         <p class="price">$84.99</p>   
+      </div>
+  </div>
+    </section>
+  </main>
+
+
+  <script>
+
+  const hotProductsVariations = {
+  "SKULLPANDA L'impressionnisme Series Plush Doll": [
+    "images/skullpanda/skullpanda1.webp",
+    "images/skullpanda/skullpanda2.webp",
+    "images/dimooCoffee/coffee4.webp",
+    "images/dimooCoffee/coffee5.webp",
+    "images/dimooCoffee/coffee6.webp"
+    // Add all variation image paths here
+  ],
+  // Add more Pop Now products as needed
+   
+
+     "DIMOO WORLD x DISNEY Series-Vinyl Keychain":  [
+    "images/dimoo/dimoo1.webp",
+    "images/dimoo/dimoo2.webp",
+    "images/dimoo/dimoo3.webp",
+    "images/dimoo/dimoo4.webp",
+    "images/dimoo/dimoo5.webp",
+    "images/dimoo/dimoo6.webp",
+    "images/dimoo/dimoo7.webp",
+
+    // Add all variation image paths here
+  ],
+
+  "THE MONSTER Big into Energy Vinyl Series": [
+    "images/bigenergy/bigenergy1.webp",
+    "images/bigenergy/bigenergy2.webp",
+    "images/bigenergy/bigenergy3.webp",
+    "images/bigenergy/bigenergy4.webp",
+    "images/bigenergy/bigenergy5.webp",
+    "images/bigenergy/bigenergy6.webp",
+    "images/bigenergy/bigenergy7.webp",
+    "images/bigenergy/bigenergy8.webp",
+    "images/bigenergy/bigenergy9.webp",
+
+  ],
+
+  "Baby Molly Pocket Friendly Series-Vinyl": [
+    "images/babyMolly/babymolly1.webp",
+    "images/babyMolly/babymolly2.webp",
+    "images/babyMolly/babymolly3.webp",
+    "images/babyMolly/babymolly4.webp",
+    "images/babyMolly/babymolly5.webp",
+    "images/babyMolly/babymolly6.webp",
+    "images/babyMolly/babymolly7.webp",
+  ],
+
+  "PUCKY Forest Party Series-Vinyl Pendant": [
+    "images/forest/forest1.webp",
+    "images/forest/forest2.webp",
+    "images/forest/forest3.webp",
+    "images/forest/forest4.webp",
+    "images/forest/forest5.webp",
+    "images/forest/forest6.webp",
+    "images/forest/forest7.webp",
+    "images/forest/forest8.webp",
+    "images/forest/forest9.webp",
+     "images/forest/forest10.webp",
+  ],
+
+    "0SKULLPANDA Winter Symphony Series Plush": [
+    "images/winter/winter1.webp",
+    "images/winter/winter2.webp",
+    "images/winter/winter3.webp",
+    "images/winter/winter4.webp",
+    "images/winter/winter5.webp",
+    "images/winter/winter6.webp",
+    "images/winter/winter7.webp",
+  
+  ],
+
+
+
+
+
+
+
+
+};
+function viewHotProduct(el) {
+  const img = el.querySelector('img').getAttribute('src');
+  const brandElem = el.querySelector('.brand');
+  let brand = brandElem ? brandElem.innerHTML.replace(/<br\s*\/?>/gi, ' ').replace(/\s+/g, ' ').trim() : '';
+  const price = el.querySelector('.price').innerText;
+
+  // Use mapping or fallback to main image
+  const variations3 = hotProductsVariations[brand] || [img];
+
+  localStorage.setItem('productVariations', JSON.stringify(variations3));
+  localStorage.setItem('productImg', img);
+  localStorage.setItem('productBrand', brand);
+  localStorage.setItem('productName', brand);
+  localStorage.setItem('productPrice', price);
+  window.location.href = 'product-info2.html';
+}
+</script>
+<!--ALL PRODUCTS SCRIPT -->
+<script>
+
+  const allProductsVariations = {
+  "DIMOO Crush on Coffee Series-Soft-Faced Plush Keychain Blind Box": [
+    "images/dimooCoffee/coffee1.webp",
+    "images/dimooCoffee/coffee3.webp",
+    "images/dimooCoffee/coffee4.webp",
+    "images/dimooCoffee/coffee5.webp",
+    "images/dimooCoffee/coffee6.webp"
+    // Add all variation image paths here
+  ],
+  // Add more Pop Now products as needed
+   "THE MONSTERS Wacky Mart Series-Pillow(Chips)": [
+    "images/monster_pillow/pillow1.webp",
+    "images/monster_pillow/pillow2.webp",
+    "images/monster_pillow/pillow3.webp",
+    "images/monster_pillow/pillow4.webp",
+    "images/monster_pillow/pillow5.webp",
+    "images/monster_pillow/pillow6.webp"
+    // Add all variation image paths here
+  ],
+
+    "THE MONSTER Let's Checkmate Series-Vinyl Plush Doll":  [
+    "images/checkmate/checkmate1.webp",
+    "images/checkmate/checkmate2.webp",
+    "images/checkmate/checkmate3.webp",
+    "images/checkmate/checkmate4.webp",
+    "images/checkmate/checkmate5.webp",
+    "images/checkmate/checkmate6.webp",
+    "images/checkmate/checkmate7.webp",
+    "images/checkmate/checkmate8.webp",
+ 
+
+    // Add all variation image paths here
+  ],
+
+
+      "THE MONSTER Let's Checkmate Series-Vinyl Plush Hanging Card":  [
+    "images/hanging_card/hanging_card1.webp",
+    "images/hanging_card/hanging_card2.webp",
+    "images/hanging_card/hanging_card3.webp",
+    "images/hanging_card/hanging_card4.webp",
+    "images/hanging_card/hanging_card5.webp",
+    "images/hanging_card/hanging_card6.webp",
+    "images/hanging_card/hanging_card7.webp",
+
+
+
+    // Add all variation image paths here
+  ],
+
+
+    "MEGA LABUBU 400% Sketch":  [
+    "images/sketch/sketch1.webp",
+    "images/sketch/sketch2.webp",
+    "images/sketch/sketch3.webp",
+    "images/sketch/sketch4.webp",
+    "images/sketch/sketch5.webp",
+    "images/sketch/sketch6.webp",
+ 
+
+
+    // Add all variation image paths here
+  ],
+
+
+     "LABUBU Summer Ride Figure":  [
+    "images/summer_ride/summeride1.webp",
+    "images/summer_ride/summeride2.webp",
+    "images/summer_ride/summeride3.webp",
+    "images/summer_ride/summeride4.webp",
+    "images/summer_ride/summeride5.webp",
+    "images/summer_ride/summeride6.webp",
+    "images/summer_ride/summeride7.webp",
+
+ 
+
+
+    // Add all variation image paths here
+  ],
+
+     "LABUBU x PRONOUNCE - WINGS OF FANTASY Vinyl Plush Doll":  [
+    "images/winger/winger1.webp",
+    "images/winger/winger2.webp",
+    "images/winger/winger3.webp",
+    "images/winger/winger4.webp",
+    "images/winger/winger5.webp",
+    "images/winger/winger6.webp",
+    "images/winger/winger7.webp",
+
+
+    // Add all variation image paths here
+  ],
+
+
+  "THE MONSTERS - Exciting Macaron Vinyl Face Blind Box": [
+    "images/exciting/exciting1.webp",
+    "images/exciting/exciting2.webp",
+    "images/exciting/exciting3.webp",
+    "images/exciting/exciting4.webp",
+    "images/exciting/exciting5.webp",
+    "images/exciting/exciting6.webp"
+  ],
+
+  "Lazy Yoga Series Figures": [
+    "images/lazy/lazy1.webp",
+    "images/lazy/lazy2.webp",
+    "images/lazy/lazy3.webp",
+    "images/lazy/lazy4.webp",
+    "images/lazy/lazy5.webp",
+    "images/lazy/lazy6.webp",
+    "images/lazy/lazy7.webp",
+    "images/lazy/lazy8.webp"
+  ],
+
+    "LABUBU Rhythmic gymnatics Figure": [
+    "images/gym/gym1.webp",
+    "images/gym/gym2.webp",
+    "images/gym/gym3.webp",
+    "images/gym/gym4.webp",
+    "images/gym/gym5.webp",
+    "images/gym/gym6.webp",
+  ],
+
+
+      "Happy Halloween Party Series- LABUBU Canvas Bag": [
+    "images/happybag/happybag1.webp",
+    "images/happybag/happybag2.webp",
+    "images/happybag/happybag3.webp",
+    "images/happybag/happybag4.webp",
+    "images/happybag/happybag5.webp",
+    "images/happybag/happybag6.webp",
+  ],
+
+        "THE MONSTER FALL IN WILD SERIES-Vinyl Plush Doll": [
+    "images/wild/wild1.webp",
+    "images/wild/wild2.webp",
+    "images/wild/wild3.webp",
+    "images/wild/wild4.webp",
+   
+  ],
+
+  "THE MONSTER - DRESS BE LATTE Vinyl Plush Doll": [
+    "images/dress/dress1.webp",
+    "images/dress/dress2.webp",
+    "images/dress/dress3.webp",
+    "images/dress/dress4.webp",
+  ]
+
+};
+function viewProduct(el) {
+  const img = el.querySelector('img').getAttribute('src');
+  const brandElem = el.querySelector('.brand');
+  let brand = brandElem ? brandElem.innerHTML.replace(/<br\s*\/?>/gi, ' ').replace(/\s+/g, ' ').trim() : '';
+  const price = el.querySelector('.price').innerText;
+
+  // Use mapping or fallback to main image
+  const variations = allProductsVariations[brand] || [img];
+
+  localStorage.setItem('productVariations', JSON.stringify(variations));
+  localStorage.setItem('productImg', img);
+  localStorage.setItem('productBrand', brand);
+  localStorage.setItem('productName', brand);
+  localStorage.setItem('productPrice', price);
+  window.location.href = 'product-info2.html';
+}
+</script>
+</body>
+</html>
