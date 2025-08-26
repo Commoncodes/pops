@@ -1,1 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POP MART</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<script>
+    "use strict";
+    
+    !function() {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+        t.factory = function(e) {
+          return function() {
+            var n = Array.prototype.slice.call(arguments);
+            return n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function(e) {
+          t[e] = t.factory(e);
+        }), t.load = function(t) {
+          var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+          var i = document.getElementsByTagName("script")[0];
+          i.parentNode.insertBefore(o, i);
+        };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('6p36g6kuhk89');
+    </script>
+    <!-- End of Async Drift Code -->
+</head>
+<body class="body-home">
+
+  <!-- Navbar -->
+<header class="navbar">
+  <span class="search-icon" aria-label="Search">🔍</span>
+  <input type="text" class="search-bar" placeholder="LABUBU">
+  <div class="logo">POP MART</div>
+  <div class="icons">
+    <img class="nav-icons" src="images/customerService.webp" alt="">
+    <img class="nav-icons" src="images/headerUserIcon2.png" alt="">
+    <img class="nav-icons" src="images/heart_circle.png" alt="">
+    <img class="nav-icons" src="images/bag.png" alt="">
+  
+  </div>
+  <button class="hamburger" aria-label="Open menu">&#9776;</button>
+</header>
+
+  <!-- Navigation Tabs -->
+  <nav class="top-nav">
+    <a href="#">NEW & FEATURED</a>
+    <a href="#">CATEGORY</a>
+    <a href="#">CHARACTER</a> 
+    <a href="#">ACCESSORIES</a>
+    <a href="#">MEGA</a>
+    <a href="#">STORE PICKUP</a>
+    <a href="#">GIFT WITH PURCHASE</a>
+  </nav>
+
+
+  <div class="mobile-search">
+      <input type="text" class=" search-input" placeholder="LABUBU">
+  </div>
+
+  <main class="container-main-home">
+   
+
+    <div class="folly">
+
+   <main class="container-home">
+  <!-- Carousel Slider Start -->
+  <section class="carousel desktop-carousel">
+    <div class="carousel-track">
+      <img src="images/plush.webp" alt="Slide 1" class="carousel-slide active">
+      <img src="images/plush2.webp" alt="Slide 2" class="carousel-slide">
+      <img src="images/plush3.webp" alt="Slide 3" class="carousel-slide">
+       
+    
+    </div>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+    <div class="carousel-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+  <!-- Carousel Slider End -->
+
+<!-- Mobile Carousel (visible only on mobile) -->
+<section class="carousel mobile-carousel">
+  <div class="carousel-track">
+    <img src="images/kings/kings2.WEBP" alt="Mobile Slide 1" class="carousel-slide active">
+    <img src="images/big_energy/big_energy2.WEBP" alt="Mobile Slide 2" class="carousel-slide">
+    <img src="images/aliens/aliens1.WEBP" alt="Mobile Slide 3" class="carousel-slide">
+  </div>
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+
+
+  
+
+  <div class="new-arrivals">
+    <h1>
+        NEW ARRIVALS
+    </h1>
+
+    <a href="" style="color: #000;">
+       <p>
+       Release Calendar >
+     </p>
+    </a>
+    
+  </div>
+
+  <div class="new-line">
+    <p>07.25 03:00</p>
+    <div class="line">
+
+    </div>
+     <div class="new-line-btns">
+         <div class="new-line-btns">
+            <div class="prev-btn">
+                &#10094;
+            </div>
+            <div class="next-btn">
+                &#10095;
+            </div>
+         </div>
+      </div>
+  </div>
+   <div class="new-arrivals-grid">
+   <div class="new-arrivals-img" onclick="viewNewArrival(this)">
+    <img src="images/duckyo/duckyo-mini.jpg" alt="Slide 1" class="arrival-image">
+    <div class="arrival-text">
+         <p class="name"></p>
+         <p class="brand">Duckyo Never Grows Up Series Figure</p>
+         <p class="price">$45.99</p> 
+ 
+      </div>
+   </div>
+
+  
+
+   
+   <div class="new-arrivals-img" onclick="viewNewArrival(this)">
+        <img src="images/pendant/pendant-mini.jpg" alt="Slide 1" class="arrival-image">
+        <div class="arrival-text">
+          <p class="name"></p>
+         <p class="brand">Pin For Love Series Letter Pendant</p>
+         <p class="price">$57.00</p>   
+      </div>
+
+      
+
+   </div>
+
+     <div class="new-arrivals-img" onclick="viewNewArrival(this)">
+    <img src="images/duckoo/duckoo-mini.jpg" alt="Slide 1" class="arrival-image">
+    <div class="arrival-text">
+         <p class="name"></p>
+         <p class="brand">DUCKOO FOUNTAIN Comic Con Limited Figure</p>
+         <p class="price">$45.99</p> 
+ 
+      </div>
+   </div>
+
+     <div class="new-arrivals-img" onclick="viewNewArrival(this)">
+    <img src="images/aliens/aliens-mini.jpg" alt="Slide 1" class="arrival-image">
+    <div class="arrival-text">
+         <p class="name"></p>
+         <p class="brand">Hirono Search For Aliens Figurine</p>
+         <p class="price">$111.99</p> 
+ 
+      </div>
+   </div>
+
+       <div class="new-arrivals-img" onclick="viewNewArrival(this)">
+    <img src="images/big_energy/big_energy-mini.jpg" alt="Slide 1" class="arrival-image">
+    <div class="arrival-text">
+         <p class="name"></p>
+         <p class="brand">Big Into Energy Series - ROCK THE UNIVERSE</p>
+         <p class="price">$127.00</p> 
+ 
+      </div>
+   </div>
+ 
+
+   <div class="new-arrivals-img" onclick="viewNewArrival(this)">
+    <img src="images/duckyo/duckyo-mini.jpg" alt="Slide 1" class="arrival-image">
+    <div class="arrival-text">
+      <p class="name"></p>
+         <p class="brand">Duckyo Never Grows Up Series Figure</p>
+         <p class="price">$45.99</p> 
+ 
+      </div>
+   </div>
+   <div class="new-arrivals-img" onclick="viewNewArrival(this)">
+        <img src="images/pendant/pendant-mini.jpg" alt="Slide 1" class="arrival-image">
+        <div class="arrival-text">
+          <p class="name"></p>
+         <p class="brand">Pin For Love Series Letter Pendant</p>
+         <p class="price">$57.00</p>   
+      </div>
+
+   </div>
+   <div class="new-arrivals-img" onclick="viewProduct(this)">
+        <img src="images/duckoo/duckoo-mini.jpg" alt="Slide 1" class="arrival-image">
+        <div class="arrival-text">
+          <p class="name"></p>
+         <p class="brand">DUCKOO FOUNTAIN Comic Con Limited Figure</p>
+         <p class="price">$150.81</p>   
+      </div>
+
+   </div>
+  </div>
+
+   <div class="pop-now-section">
+    <div class="pop-header">
+      <div class="pop-now-header2">
+        <img src="images/popNowLogo.png" alt="Pop Now Header Image" class="pop-now-header-image">
+        <h1>
+        POP NOW
+    </h1>
+      </div>
+
+      <a href="shop.html" style="color: #000;">
+         <p>
+       Explore More Series >
+     </p>
+      </a>
+    
+    </div>
+
+      <div class="pop-now-carousel-wrapper">
+    <button class="pop-now-btn prev-btn">&#10094;</button>
+        <div class="pop-now-grid">
+   <div class="pop-now-img" onclick="viewPopNow(this)">
+    <img src="images/popbox1.webp" alt="Slide 1" class="pop-now-image">
+    <div class="pop-now-text">
+         <p class="brand">CRYBABY x <br>Powerpuff Girls</p>
+         <p class="price">$299.90/PICK</p>   
+           <button onclick="window.location.href='shop.html'">
+            Pick Now
+         </button>
+      </div>
+   </div>
+   <div class="pop-now-img" onclick="viewPopNow(this)">
+        <img src="images/popbox2.webp" alt="Slide 1" class="pop-now-image">
+        <div class="pop-now-text">
+         <p class="brand">PUCKY Roly-Poly <br>Kitty Series</p>
+         <p class="price">$1,300.68/PICK</p>   
+           <button onclick="window.location.href='shop.html'">
+            Pick Now
+         </button>
+      </div>
+
+   </div>
+   <div class="pop-now-img" onclick="viewPopNow(this)">
+        <img src="images/popbox3.webp" alt="Slide 1" class="pop-now-image">
+        <div class="pop-now-text">
+         <p class="brand">DIMOO WORLD x <br> DISNEY Series-Vinyl</p>
+         <p class="price">$50.99/PICK</p>   
+         <button onclick="window.location.href='shop.html'">
+            Pick Now
+         </button>
+      </div>
+
+   </div>
+
+      <div class="pop-now-img" onclick="viewPopNow(this)">
+    <img src="images/ted/ted1.WEBP" alt="Slide 1" class="pop-now-image">
+    <div class="pop-now-text">
+         <p class="brand">Ted2 Teddy Bear <br> Action Plush Pendant</p>
+         <p class="price">$1,112.99/PICK</p>   
+          <button onclick="window.location.href='shop.html'">
+            Pick Now
+         </button>
+      </div>
+   </div>
+   <div class="pop-now-img" onclick="viewPopNow(this)">
+        <img src="images/stitchbox.webp" alt="Slide 1" class="pop-now-image">
+        <div class="pop-now-text">
+         <p class="brand">Disney Stitch Little <br>Emotion Series</p>
+         <p class="price">$19.99/PICK</p>   
+           <button onclick="window.location.href='shop.html'">
+            Pick Now
+         </button>
+      </div>
+
+   </div>
+   <div class="pop-now-img" onclick="viewPopNow(this)">
+        <img src="images/popbox7.webp" alt="Slide 1" class="pop-now-image">
+        <div class="pop-now-text">
+         <p class="brand">CRYBABY Crying For x <br> Love Series Figure</p>
+         <p class="price">$27.99/PICK</p>   
+         <button onclick="window.location.href='shop.html'">
+            Pick Now
+         </button>
+      </div>
+
+   </div>
+
+      <div class="pop-now-img" onclick="viewPopNow(this)">
+    <img src="images/twinkle/twinkle1.WEBP" alt="Slide 1" class="pop-now-image">
+    <div class="pop-now-text">
+         <p class="brand">We are Twinkle Series-Plush <br>Pendant Blind Box</p>
+         <p class="price">$22.99/PICK</p>   
+           <button onclick="window.location.href='shop.html'">
+            Pick Now
+         </button>
+      </div>
+   </div>
+   <div class="pop-now-img" onclick="viewPopNow(this)">
+        <img src="images/popbox6.webp" alt="Slide 1" class="pop-now-image">
+        <div class="pop-now-text">
+         <p class="brand">Mega Molly <br> Hello Kitty Series</p>
+         <p class="price">$30.99/PICK</p>   
+            <button onclick="window.location.href='shop.html'">
+            Pick Now
+         </button>
+      </div>
+
+   </div>
+   <div class="pop-now-img" onclick="viewPopNow(this)">
+        <img src="images/popbox7.webp" alt="Slide 1" class="pop-now-image">
+        <div class="pop-now-text">
+         <p class="brand">DIMOO WORLD x <br> DISNEY Series-Vinyl</p>
+         <p class="price">$22.90/PICK</p>  
+         
+           <button onclick="window.location.href='shop.html'">
+            Pick Now
+         </button>
+       
+         
+      </div>
+
+   </div>
+  
+  </div>
+    <button class="pop-now-btn next-btn">&#10095;</button>
+  </div>
+   
+
+
+  
+  </div>
+
+  <div class="hot-product-grid-main">
+
+     <div class="hot-product-first">
+        <h1>
+           Hot <br> Products...
+        </h1>
+      <div class="hotty">
+        <a href="hot_now.html" style="color: #fff; ">
+            <p class="brand">VIEW MORE ></p>
+        </a>
+         
+         <div class="hot-carousel-btns">
+            <div class="prev-btn">
+                &#10094;
+            </div>
+            <div class="next-btn">
+                &#10095;
+            </div>
+         </div>
+      </div>
+      </div>
+
+       <div class="hot-product-grid">
+      
+
+      <div class="hot-product-scroll">
+        
+      </div>
+
+  
+      <div class="hot-product-img" onclick="viewHotProduct(this)">
+        <div class="image-wrapper">
+                <img src="images/skullpanda/skillpanda1a.WEBP" alt="Slide 1" class="hot-product-image">
+
+        </div>
+        <div class="hot-product-text">
+          <p class="name">SKULLPANDA</p>
+         <p class="brand">SKULLPANDA L'impressionnisme Series Plush Doll</p>
+         <p class="price">$27.99</p>   
+      </div>
+
+      </div>
+      <div class="hot-product-img"   onclick="viewHotProduct(this)">
+        <div class="image-wrapper">
+                <img src="images/dimoo/dimoo1a.WEBP" alt="Slide 1" class="hot-product-image">
+
+        </div>
+        <div class="hot-product-text">
+         <p class="name">DIMOO</p>
+         <p class="brand">DIMOO WORLD x DISNEY Series-Vinyl Keychain</p>
+         <p class="price">$22.99</p>   
+      </div>
+
+   </div>
+   <div class="hot-product-img"   onclick="viewHotProduct(this)">
+        <div class="image-wrapper">
+             <img src="images/bigEnergy/bigEnergy1.WEBP" alt="Slide 1" class="hot-product-image">
+
+        </div>
+        <div class="hot-product-text">
+          <p class="name">THE MONSTER</p>
+         <p class="brand">THE MONSTER Big into Energy Vinyl Series</p>
+         <p class="price">$35.99</p>   
+      </div>
+
+   </div>
+
+      <div class="hot-product-img"  onclick="viewHotProduct(this)">
+        <div class="image-wrapper">
+             <img src="images/babyMolly/babymolly1.WEBP" alt="Slide 1" class="hot-product-image">
+
+        </div>
+        <div class="hot-product-text"  onclick="viewHotProduct(this)">
+          <p class="name">MOLLY</p>
+         <p class="brand">Baby Molly Pocket Friendly Series-Vinyl</p>
+         <p class="price">$46.90</p>   
+      </div>
+
+   </div>
+
+      <div class="hot-product-img"  onclick="viewHotProduct(this)">
+        <div class="image-wrapper">
+             <img src="images/forest/forest1.WEBP" alt="Slide 1" class="hot-product-image">
+
+        </div>
+        <div class="hot-product-text" >
+          <p class="name">PUCKY</p>
+         <p class="brand">PUCKY Forest Party Series-Vinyl Pendant</p>
+         <p class="price">$99.99</p>   
+      </div>
+
+   </div>
+
+      <div class="hot-product-img"  onclick="viewHotProduct(this)">
+        <div class="image-wrapper">
+             <img src="images/winter/winter1.WEBP" alt="Slide 1" class="hot-product-image">
+
+        </div>
+        <div class="hot-product-text">
+          <p class="name">SKULLPANDA</p>
+         <p class="brand">0SKULLPANDA Winter Symphony Series Plush</p>
+         <p class="price">$119.99</p>   
+      </div>
+
+   </div>
+  </div>
+  </div>
+
+
+
+    <div class="new-arrivals">
+    <h1>
+        POPULAR SEARCHES
+    </h1>
+  </div>
+
+    <div class="popular-searches">
+        <div class="pop-row1">
+        <div class="popular-searches-container">
+            <p>SKULLPANDA</p>
+        </div>
+        <div class="popular-searches-container">
+            <p>HIRONO</p>
+        </div>
+        <div class="popular-searches-container">
+            <p>LABUBU</p>
+        </div>
+        <div class="popular-searches-container">
+            <p>POPBEAN</p>
+        </div>
+        <div class="popular-searches-container">
+            <p>TRY POP NOW!</p>
+        </div>
+        <div class="popular-searches-container">
+            <p>PLUSH</p>
+        </div>
+        <div class="popular-searches-container">
+            <p>NEW ARRIVALS</p>
+        </div>
+        <div class="popular-searches-container">
+            <p>MEGA COLLECTION</p>
+        </div>
+        </div>
+
+
+            <div class="pop-row2">
+        <div class="popular-searches-container">
+            <p>BLIND BOX</p>
+        </div>
+         <div class="popular-searches-container">
+            <p>THE MONSTER</p>
+        </div>
+         <div class="popular-searches-container">
+            <p>PEACH RIOT</p>
+        </div>
+         <div class="popular-searches-container">
+            <p>CRYBABY</p>
+        </div>
+         <div class="popular-searches-container">
+            <p>PUCKY</p>
+        </div>
+        
+        </div>
+       
+        </div>
+
+
+        <div class="wonder-img w-desktop">
+            <img src="images/popbanner.webp" alt="Wonder Image">
+            
+        </div>
+
+        
+        <div class="wonder-img w-mobile">
+            <img src="images/popbanner-mob.jpeg" alt="Wonder Image">
+            
+        </div>
+
+        
+         <div class="pop-header">
+      <div class="pop-now-header2">
+        <h1>
+         OUR ARTISTS
+    </h1>
+      </div>
+    </div>
+
+
+    <div class="our-artist-carousel-wrapper">
+        <button class="artist-btn prev-btn">&#10094;</button>
+
+        <div class="our-artist-section">
+
+
+      <div class="artist-card">
+        <div class="artist-pic">
+          <img src="images/kenny.webp" alt="">
+        </div>
+        <div class="artist-info">
+          <h1>
+            Kenny Wong
+          </h1>
+          <p>
+            Kenny founded Pop Mart in 2010, driven by a passion for art and design. With a background in industrial design, he has transformed the company into a global leader in collectible art toys. His vision is to create a platform that connects artists with fans worldwide, making art accessible and fun.
+          </p>
+        </div>
+      </div>
+
+       <div class="artist-card">
+        <div class="artist-pic">
+                    <img src="images/molly.webp" alt="">
+
+        </div>
+        <div class="artist-info">
+          <h1>
+            Molly
+          </h1>
+          <p>
+            Molly has been passionate about drawing and painting since childhood. A graduate from Suan Suan Sunandha Rajabhat University, she has a degree in Fine Arts. Her work is characterized by vibrant colors and whimsical characters, often inspired by nature and her surroundings.
+          </p>
+        </div>
+      </div>
+
+
+        <div class="artist-card">
+        <div class="artist-pic">
+          <img src="images/kenny.webp" alt="">
+        </div>
+        <div class="artist-info">
+          <h1>
+            Kenny Wong
+          </h1>
+          <p>
+            Kenny founded Pop Mart in 2010, driven by a passion for art and design. With a background in industrial design, he has transformed the company into a global leader in collectible art toys. His vision is to create a platform that connects artists with fans worldwide, making art accessible and fun.
+          </p>
+        </div>
+      </div>
+    
+    </div>
+
+      <button class="artist-btn next-btn">&#10095;</button>
+
+
+    </div>
+
+  
+
+
+
+         <div class="pop-header">
+      <div class="pop-now-header2">
+        <h1>
+        RECOMENDED FOR YOU
+    </h1>
+      </div>
+    </div>
+
+          <section class="products container22">
+      <span class="app-only">APP ONLY</span>
+  
+  <div class="info" onclick="viewProduct(this)">
+    <img src="images/dimooCoffee/coffee1.WEBP" alt="Product 1">
+       <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">DIMOO Crush on Coffee Series-Soft-Faced Plush Keychain Blind Box</p>
+         <p class="price">$20.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  
+  <div class="info" onclick="viewProduct(this)">
+    <img src="images/monster_pillow/pillow1.WEBP" alt="Product 2">
+       <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTERS Wacky Mart Series-Pillow(Chips)</p>
+         <p class="price">$200.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/checkmate/checkmate1.WEBP" alt="Product 3">
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTER Let's Checkmate Series-Vinyl Plush Doll</p>
+         <p class="price">$352.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/hanging_card/hanging_card1.WEBP" alt="Product 4">
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTER Let's Checkmate Series-Vinyl Plush Hanging Card</p>
+         <p class="price">$106.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/sketch/sketch1.WEBP" alt="Product 5">
+       <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">MEGA LABUBU 400% Sketch</p>
+         <p class="price">$294.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+
+  <div class="info" onclick="viewProduct(this)">
+     <img src="images/summer_ride/summeride1.WEBP" alt="Product 6">
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">LABUBU Summer Ride Figure</p>
+         <p class="price">$99.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+         <img src="images/winger/Winger1.WEBP" alt="Product 7">
+     <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">LABUBU x PRONOUNCE - WINGS OF FANTASY Vinyl Plush Doll</p>
+         <p class="price">$80.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/exciting/exciting1.WEBP" alt="Product 8">
+       <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTERS - Exciting Macaron Vinyl Face Blind Box</p>
+         <p class="price">$359.90</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/lazy/lazy1.WEBP" alt="Product 9">
+
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">Lazy Yoga Series Figures</p>
+         <p class="price">$50.99</p>   
+      </div>
+   
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/gym/gym1.WEBP" alt="Product 2">
+      <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">LABUBU Rhythmic gymnatics Figure</p>
+         <p class="price">$18.99</p>   
+      </div>
+  </div>
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/happybag/happybag1.WEBP" alt="Product 5">
+     <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">Happy Halloween Party Series- LABUBU Canvas Bag</p>
+         <p class="price">$49.99</p>   
+      </div>
+  </div>
+
+   <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/wild/wild1.WEBP" alt="Product 5">
+     <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTER FALL IN WILD SERIES-Vinyl Plush Doll</p>
+         <p class="price">$19.99</p>   
+      </div>
+  </div>
+
+  <span class="app-only">APP ONLY</span>
+  <div class="info" onclick="viewProduct(this)">
+      <img src="images/dress/dress1.WEBP" alt="Product 5">
+     <div class="info-text">
+         <p class="name">THE MONSTERS</p>
+         <p class="brand">THE MONSTER - DRESS BE LATTE Vinyl Plush Doll</p>
+         <p class="price">$84.99</p>   
+      </div>
+  </div>
+    </section>
+    </div>
+
+  
+  </main>
+
+  <div class="footer">
+    <div class="social-box">
+      <div class="follow-box">
+        <h2>FOLLOW US ON</h2>
+       <div class="social-icons">
+        <a href="#"><img src="images/instagram.png" alt="Facebook"></a>
+        <a href="#"><img src="images/facebook.png" alt="Twitter"></a>
+        <a href="#"><img src="images/tiktok.png" alt="Instagram"></a>
+       </div>
+      </div>
+    
+      <div class="social-apps">
+        <a href="#"><img src="images/Android_new.png" alt="Twitter"></a>
+        <a href="#"><img src="images/ios.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-contents">
+      <div class="join">
+        <h3>
+          JOIN THE COMMUNITY
+        </h3>
+
+        <p>
+        Be the first to receive our new releases, special offers and more
+        </p>
+          <input type="text" placeholder="Your email address">
+           <h4>
+          CONTACT US
+        </h4>
+        <div class="contact-box">
+          <div class="box1">
+            <h5>Chat</h5>
+            <p style="margin-bottom: 0rem;">Monday - Sunday 8:00am - 2:00am PDT</p>
+          </div>
+          <div class="box2">
+                        <p>Chat with us</p>
+
+          </div>
+        </div>
+
+        <div class="contact-box">
+           <div class="box1">
+            <h5>Email</h5>
+            <p style="margin-bottom: 0rem;">na.support@popmart.com</p>
+          </div>
+          <div class="box2">
+                        <p>Email us</p>
+
+          </div>
+        </div>
+
+        <div class="country-box">
+          <p style="padding: 0rem; margin: 0rem;">CHANGE COUNTRY/REGION</p>
+        </div>
+
+
+      </div>
+
+      <div class="links-box">
+          <div class="support">
+        <h3>SUPPORT</h3>
+        <p>FAQ</p>
+         <p>SHIPPING INFO</p>
+         <p>PRIVACY POLICY</p>
+         <p>TRACK YOUR ORDER</p>
+          <p>FIND A STORE</p>
+           <p>RETURNS</p>
+            <p>POP BLOCK</p>
+             <p>ORDER FAILURE GUIDE</p>
+              <p>EXCHANGE</p>
+               <p>TERMS AND CONDITION</p>
+               <p>AUTHENTICITY CHECK</p>
+      </div>
+      <div class="about">
+        <h3>ABOUT US</h3>
+        <p>NEWS</p>
+         <p>ARTIST</p>
+         <p>ABOUT POPMART</p>
+         <p>INVESTORS RELATIONS</p>
+          <p>CONTACT US</p>
+           <p>CAREERS</p>
+      </div>
+      <div class="shop">
+        <h3>SHOP</h3>
+        
+        <p>LAUNCH CALENDAR</p>
+         <p>TRENDING</p>
+         <p>BLIND BOXES</p>
+         <p>MEGA COLLECTION</p>
+          <p>ACCESSORIES</p>
+           
+      </div>
+      </div>
+    
+    </div>
+    
+     <div class="reserved-box">
+      <div class="follow-box">
+       <p>2025 POP MART ALL RIGHTS RESERVED</p>
+       </div>
+
+
+        <div class="social-apps">
+        <a href="#"><img src="images/mastercard.png" alt="master"></a>
+        <a href="#"><img src="images/visa.png" alt="visa"></a>
+      </div>
+      </div>
+    
+     
+    </div>
+
+
+  </div>
+
+  <!-- Mobile Side Menu Modal -->
+<div id="mobileMenu" class="mobile-menu-modal">
+  <button id="closeMobileMenu" class="close-mobile-menu">&times;</button>
+
+    <!-- Top section -->
+    <div class="top-section">
+      <a href="profile.html">👤 Sign in / Register</a>
+    </div>
+
+    <!-- Menu items -->
+    <div class="menu-item">NEW & FEATURED ➝</div>
+    <div class="menu-item">CATEGORIES ➝</div>
+    <div class="menu-item">CHARACTERS ➝</div>
+    <a href="store.html"> <div class="menu-item">STORE PICKUP</div></a>
+   
+
+    <!-- Lower section -->
+    <div class="lower-section">
+      <div class="lower-item">Chat 🎧</div>
+      <div class="lower-item">Find a Store 🏬</div>
+      <div class="lower-item">Join Community ✉️</div>
+      <div class="lower-item">Switch Regions <img src="https://flagcdn.com/w20/us.png" alt="US Flag" class="flag"></div>
+    </div>
+  
+</div>
+
+ <nav class="bottom-nav">
+  <a href="home.html">
+      <img class="nav-icons" src="images/home_filled.png" alt="">
+      <span class="nav-label">Home</span>
+  </a>
+
+  <a href="categories.html">
+      <img class="nav-icons" src="images/categories.png" alt="">
+      <span class="nav-label">Category</span>
+  </a>
+  <a href="cart.html">
+      <img class="nav-icons" src="images/bag.png" alt="">
+      <span class="nav-label">MY BAG</span>
+  </a>
+   <a href="profile.html">
+    <img class="nav-icons" src="images/headerUserIcon2.png" alt="">
+    <span class="nav-label">Me</span>
+</a>
+</nav>
+
+<script>
+// Desktop Carousel
+(function() {
+  const desktopCarousel = document.querySelector('.desktop-carousel');
+  if (!desktopCarousel) return;
+  const slides = desktopCarousel.querySelectorAll('.carousel-slide');
+  const dots = desktopCarousel.querySelectorAll('.carousel-dots .dot');
+  const nextBtn = desktopCarousel.querySelector('.carousel-btn.next');
+  const prevBtn = desktopCarousel.querySelector('.carousel-btn.prev');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    currentSlide = index;
+  }
+
+  nextBtn.onclick = function() {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  };
+  prevBtn.onclick = function() {
+    let prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  };
+  dots.forEach((dot, i) => {
+    dot.onclick = () => showSlide(i);
+  });
+
+  setInterval(() => {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }, 4000);
+})();
+
+// Mobile Carousel
+(function() {
+  const mobileCarousel = document.querySelector('.mobile-carousel');
+  if (!mobileCarousel) return;
+  const slides = mobileCarousel.querySelectorAll('.carousel-slide');
+  const dots = mobileCarousel.querySelectorAll('.carousel-dots .dot');
+  const nextBtn = mobileCarousel.querySelector('.carousel-btn.next');
+  const prevBtn = mobileCarousel.querySelector('.carousel-btn.prev');
+  let currentSlide = 0;
+
+   // Add this for the first image click
+  if (slides[0]) {
+    slides[0].addEventListener('click', function() {
+      window.location.href = 'kings.html';
+    });
+  }
+
+    if (slides[1]) {
+    slides[1].addEventListener('click', function() {
+      window.location.href = 'big_energy.html';
+    });
+  }
+
+    if (slides[2]) {
+    slides[2].addEventListener('click', function() {
+      window.location.href = 'hirono.html';
+    });
+  }
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    currentSlide = index;
+  }
+
+  nextBtn.onclick = function() {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  };
+  prevBtn.onclick = function() {
+    let prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  };
+  dots.forEach((dot, i) => {
+    dot.onclick = () => showSlide(i);
+  });
+
+  setInterval(() => {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }, 4000);
+})();
+</script>
+<script>
+const arrivalsGrid = document.querySelector('.new-arrivals-grid');
+const arrivalsImgs = document.querySelectorAll('.new-arrivals-img');
+const prevBtn = document.querySelector('.new-line-btns .prev-btn');
+const nextBtn = document.querySelector('.new-line-btns .next-btn');
+let currentIndex = 0;
+const visibleCount = 4;
+
+function scrollArrivals(index) {
+  const itemWidth = arrivalsImgs[0].offsetWidth + 20; // 20px gap
+  arrivalsGrid.scrollTo({
+    left: index * itemWidth,
+    behavior: 'smooth'
+  });
+}
+
+nextBtn.onclick = function() {
+  if (currentIndex < arrivalsImgs.length - visibleCount) {
+    currentIndex++;
+    scrollArrivals(currentIndex);
+  }
+};
+prevBtn.onclick = function() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    scrollArrivals(currentIndex);
+  }
+};
+</script>
+<script>
+const grid = document.querySelector('.new-arrivals-grid');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+grid.addEventListener('mousedown', (e) => {
+  isDown = true;
+  grid.classList.add('dragging');
+  startX = e.pageX - grid.offsetLeft;
+  scrollLeft = grid.scrollLeft;
+});
+grid.addEventListener('mouseleave', () => {
+  isDown = false;
+  grid.classList.remove('dragging');
+});
+grid.addEventListener('mouseup', () => {
+  isDown = false;
+  grid.classList.remove('dragging');
+});
+grid.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - grid.offsetLeft;
+  const walk = (x - startX) * 1.5; // scroll speed
+  grid.scrollLeft = scrollLeft - walk;
+});
+
+// Touch support for mobile
+grid.addEventListener('touchstart', (e) => {
+  isDown = true;
+  startX = e.touches[0].pageX - grid.offsetLeft;
+  scrollLeft = grid.scrollLeft;
+});
+grid.addEventListener('touchend', () => {
+  isDown = false;
+});
+grid.addEventListener('touchmove', (e) => {
+  if (!isDown) return;
+  const x = e.touches[0].pageX - grid.offsetLeft;
+  const walk = (x - startX) * 1.5;
+  grid.scrollLeft = scrollLeft - walk;
+});
+</script>
+<script>
+const popNowGrid = document.querySelector('.pop-now-grid');
+const popNowImgs = document.querySelectorAll('.pop-now-img');
+const popPrevBtn = document.querySelector('.pop-now-btn.prev-btn');
+const popNextBtn = document.querySelector('.pop-now-btn.next-btn');
+let popCurrentIndex = 0;
+const popVisibleCount = window.innerWidth <= 768 ? 2 : 4;
+
+function scrollPopNow(index) {
+  const itemWidth = popNowImgs[0].offsetWidth + parseInt(getComputedStyle(popNowGrid).gap) || 20;
+  popNowGrid.scrollTo({
+    left: index * itemWidth,
+    behavior: 'smooth'
+  });
+}
+
+popNextBtn.onclick = function() {
+  if (popCurrentIndex < popNowImgs.length - popVisibleCount) {
+    popCurrentIndex++;
+    scrollPopNow(popCurrentIndex);
+  }
+};
+popPrevBtn.onclick = function() {
+  if (popCurrentIndex > 0) {
+    popCurrentIndex--;
+    scrollPopNow(popCurrentIndex);
+  }
+};
+
+// Drag/Swipe support
+let isDownPop = false;
+let startXPop;
+let scrollLeftPop;
+
+popNowGrid.addEventListener('mousedown', (e) => {
+  isDownPop = true;
+  startXPop = e.pageX - popNowGrid.offsetLeft;
+  scrollLeftPop = popNowGrid.scrollLeft;
+});
+popNowGrid.addEventListener('mouseleave', () => {
+  isDownPop = false;
+});
+popNowGrid.addEventListener('mouseup', () => {
+  isDownPop = false;
+});
+popNowGrid.addEventListener('mousemove', (e) => {
+  if (!isDownPop) return;
+  e.preventDefault();
+  const x = e.pageX - popNowGrid.offsetLeft;
+  const walk = (x - startXPop) * 1.5;
+  popNowGrid.scrollLeft = scrollLeftPop - walk;
+});
+
+// Touch support
+popNowGrid.addEventListener('touchstart', (e) => {
+  isDownPop = true;
+  startXPop = e.touches[0].pageX - popNowGrid.offsetLeft;
+  scrollLeftPop = popNowGrid.scrollLeft;
+});
+popNowGrid.addEventListener('touchend', () => {
+  isDownPop = false;
+});
+popNowGrid.addEventListener('touchmove', (e) => {
+  if (!isDownPop) return;
+  const x = e.touches[0].pageX - popNowGrid.offsetLeft;
+  const walk = (x - startXPop) * 1.5;
+  popNowGrid.scrollLeft = scrollLeftPop - walk;
+});
+</script>
+<script>
+const hotProductGrid = document.querySelector('.hot-product-grid');
+const hotProductImgs = document.querySelectorAll('.hot-product-img');
+const hotPrevBtn = document.querySelector('.hot-carousel-btns .prev-btn');
+const hotNextBtn = document.querySelector('.hot-carousel-btns .next-btn');
+let hotCurrentIndex = 0;
+const hotVisibleCount = window.innerWidth <= 768 ? 2 : 4;
+
+function scrollHotProduct(index) {
+  const itemWidth = hotProductImgs[0].offsetWidth + parseInt(getComputedStyle(hotProductGrid).gap) || 20;
+  hotProductGrid.scrollTo({
+    left: index * itemWidth,
+    behavior: 'smooth'
+  });
+}
+
+hotNextBtn.onclick = function() {
+  if (hotCurrentIndex < hotProductImgs.length - hotVisibleCount) {
+    hotCurrentIndex++;
+    scrollHotProduct(hotCurrentIndex);
+  }
+};
+hotPrevBtn.onclick = function() {
+  if (hotCurrentIndex > 0) {
+    hotCurrentIndex--;
+    scrollHotProduct(hotCurrentIndex);
+  }
+};
+
+// Drag/Swipe support
+let isDownHot = false;
+let startXHot;
+let scrollLeftHot;
+
+hotProductGrid.addEventListener('mousedown', (e) => {
+  isDownHot = true;
+  startXHot = e.pageX - hotProductGrid.offsetLeft;
+  scrollLeftHot = hotProductGrid.scrollLeft;
+});
+hotProductGrid.addEventListener('mouseleave', () => {
+  isDownHot = false;
+});
+hotProductGrid.addEventListener('mouseup', () => {
+  isDownHot = false;
+});
+hotProductGrid.addEventListener('mousemove', (e) => {
+  if (!isDownHot) return;
+  e.preventDefault();
+  const x = e.pageX - hotProductGrid.offsetLeft;
+  const walk = (x - startXHot) * 1.5;
+  hotProductGrid.scrollLeft = scrollLeftHot - walk;
+});
+
+// Touch support
+hotProductGrid.addEventListener('touchstart', (e) => {
+  isDownHot = true;
+  startXHot = e.touches[0].pageX - hotProductGrid.offsetLeft;
+  scrollLeftHot = hotProductGrid.scrollLeft;
+});
+hotProductGrid.addEventListener('touchend', () => {
+  isDownHot = false;
+});
+hotProductGrid.addEventListener('touchmove', (e) => {
+  if (!isDownHot) return;
+  const x = e.touches[0].pageX - hotProductGrid.offsetLeft;
+  const walk = (x - startXHot) * 1.5;
+  hotProductGrid.scrollLeft = scrollLeftHot - walk;
+});
+</script>
+<script>
+const artistGrid = document.querySelector('.our-artist-section');
+const artistCards = document.querySelectorAll('.artist-card');
+const artistPrevBtn = document.querySelector('.artist-btn.prev-btn');
+const artistNextBtn = document.querySelector('.artist-btn.next-btn');
+let artistCurrentIndex = 0;
+const artistVisibleCount = window.innerWidth <= 768 ? 1 : 2;
+
+function scrollArtist(index) {
+  const itemWidth = artistCards[0].offsetWidth + parseInt(getComputedStyle(artistGrid).gap) || 30;
+  artistGrid.scrollTo({
+    left: index * itemWidth,
+    behavior: 'smooth'
+  });
+}
+
+artistNextBtn.onclick = function() {
+  if (artistCurrentIndex < artistCards.length - artistVisibleCount) {
+    artistCurrentIndex++;
+    scrollArtist(artistCurrentIndex);
+  }
+};
+artistPrevBtn.onclick = function() {
+  if (artistCurrentIndex > 0) {
+    artistCurrentIndex--;
+    scrollArtist(artistCurrentIndex);
+  }
+};
+
+// Drag/Swipe support
+let isDownArtist = false;
+let startXArtist;
+let scrollLeftArtist;
+
+artistGrid.addEventListener('mousedown', (e) => {
+  isDownArtist = true;
+  startXArtist = e.pageX - artistGrid.offsetLeft;
+  scrollLeftArtist = artistGrid.scrollLeft;
+});
+artistGrid.addEventListener('mouseleave', () => {
+  isDownArtist = false;
+});
+artistGrid.addEventListener('mouseup', () => {
+  isDownArtist = false;
+});
+artistGrid.addEventListener('mousemove', (e) => {
+  if (!isDownArtist) return;
+  e.preventDefault();
+  const x = e.pageX - artistGrid.offsetLeft;
+  const walk = (x - startXArtist) * 1.5;
+  artistGrid.scrollLeft = scrollLeftArtist - walk;
+});
+
+// Touch support
+artistGrid.addEventListener('touchstart', (e) => {
+  isDownArtist = true;
+  startXArtist = e.touches[0].pageX - artistGrid.offsetLeft;
+  scrollLeftArtist = artistGrid.scrollLeft;
+});
+artistGrid.addEventListener('touchend', () => {
+  isDownArtist = false;
+});
+artistGrid.addEventListener('touchmove', (e) => {
+  if (!isDownArtist) return;
+  const x = e.touches[0].pageX - artistGrid.offsetLeft;
+  const walk = (x - startXArtist) * 1.5;
+  artistGrid.scrollLeft = scrollLeftArtist - walk;
+});
+</script>
+
+<script>
+const newArrivalVariations = {
+
+  "Duckyo Never Grows Up Series Figure": [
+    "images/duckyo/duckyo1.webp",
+    "images/duckyo/duckyo2.webp",
+    "images/duckyo/duckyo3.webp",
+    "images/duckyo/duckyo4.webp",
+    "images/duckyo/duckyo5.webp",
+    "images/duckyo/duckyo6.webp",
+    "images/duckyo/duckyo7.webp",
+    "images/duckyo/duckyo8.webp",
+    "images/duckyo/duckyo9.webp",
+    "images/duckyo/duckyo10.webp",
+    "images/duckyo/duckyo11.webp"
+    // Add all variation image paths here
+  ],
+  // Add more Pop Now products as needed
+   "Pin For Love Series Letter Pendant": [
+    "images/pendant/pendant1.webp",
+    "images/pendant/pendant2.webp",
+    "images/pendant/pendant3.webp",
+    "images/pendant/pendant4.webp",
+    "images/pendant/pendant5.webp",
+    "images/pendant/pendant6.webp",
+    "images/pendant/pendant7.webp",
+    "images/pendant/pendant8.webp",
+    "images/pendant/pendant9.webp",
+    "images/pendant/pendant10.webp",
+    "images/pendant/pendant11.webp",
+    // Add all variation image paths here
+  ],
+    // Add more Pop Now products as needed
+   "Hirono Search For Aliens Figurine": [
+    "images/aliens/aliens1.webp",
+    "images/aliens/aliens2.webp",
+    "images/aliens/aliens3.webp",
+    "images/aliens/aliens4.webp",
+    "images/aliens/aliens5.webp",
+    "images/aliens/aliens6.webp",
+    "images/aliens/aliens7.webp",
+   
+    // Add all variation image paths here
+  ],
+
+     // Add more Pop Now products as needed
+   "Big Into Energy Series - ROCK THE UNIVERSE": [
+    "images/bigEnergy/bigEnergy1.webp",
+    "images/bigEnergy/bigEnergy2.webp",
+    "images/bigEnergy/bigEnergy3.webp",
+    "images/bigEnergy/bigEnergy4.webp",
+    "images/bigEnergy/bigEnergy5.webp",
+    "images/bigEnergy/bigEnergy6.webp",
+    "images/bigEnergy/bigEnergy7.webp",
+    "images/bigEnergy/bigEnergy8.webp",
+    "images/bigEnergy/bigEnergy9.webp",
+ 
+    // Add all variation image paths here
+  ],
+
+       // Add more Pop Now products as needed
+   "DUCKOO FOUNTAIN Comic Con Limited Figure": [
+    "images/duckoo/duckoo1.webp",
+    "images/duckoo/duckoo2.webp",
+    "images/duckoo/duckoo3.webp",
+    "images/duckoo/duckoo4.webp",
+    "images/duckoo/duckoo5.webp",
+    // Add all variation image paths here
+  ],
+
+
+
+  
+
+};
+
+function viewNewArrival(el) {
+  const img = el.querySelector('img').getAttribute('src');
+  const brandElem = el.querySelector('.brand');
+  let brand = brandElem ? brandElem.innerHTML.replace(/<br\s*\/?>/gi, ' ').replace(/\s+/g, ' ').trim() : '';
+  const price = el.querySelector('.price').innerText;
+
+  // Use mapping or fallback to main image
+  const variations2 = newArrivalVariations[brand] || [img];
+
+  localStorage.setItem('productVariations', JSON.stringify(variations2));
+  localStorage.setItem('productImg', img);
+  localStorage.setItem('productBrand', brand);
+  localStorage.setItem('productName', brand);
+  localStorage.setItem('productPrice', price);
+  window.location.href = 'product-info2.html';
+}
+</script>
+
+
+<!--POP NOW SCRIPT -->
+<script>
+
+  const popNowVariations = {
+  "CRYBABY x Powerpuff Girls": [
+    "images/powerpuff/puff1.webp",
+    "images/powerpuff/puff2.webp",
+    "images/powerpuff/puff3.webp",
+    "images/powerpuff/puff4.webp",
+    "images/powerpuff/puff5.webp",
+    "images/powerpuff/puff6.webp"
+    // Add all variation image paths here
+  ],
+  // Add more Pop Now products as needed
+   "PUCKY Roly-Poly Kitty Series": [
+    "images/pucky/pucky1.webp",
+    "images/pucky/pucky2.webp",
+    "images/pucky/pucky3.webp",
+    "images/pucky/pucky4.webp",
+    "images/pucky/pucky5.webp",
+    "images/pucky/pucky6.webp"
+    // Add all variation image paths here
+  ],
+
+    "DIMOO WORLD x DISNEY Series-Vinyl":  [
+    "images/dimoo/dimoo1.webp",
+    "images/dimoo/dimoo2.webp",
+    "images/dimoo/dimoo3.webp",
+    "images/dimoo/dimoo4.webp",
+    "images/dimoo/dimoo5.webp",
+    "images/dimoo/dimoo6.webp",
+    "images/dimoo/dimoo7.webp",
+    "images/dimoo/dimoo8.webp",
+    "images/dimoo/dimoo9.webp",
+    "images/dimoo/dimoo10.webp",
+
+    // Add all variation image paths here
+  ],
+
+
+      "Ted2 Teddy Bear Action Plush Pendant":  [
+    "images/ted/ted1.webp",
+    "images/ted/ted2.webp",
+    "images/ted/ted3.webp",
+    "images/ted/ted4.webp",
+    "images/ted/ted5.webp",
+    "images/ted/ted6.webp",
+    "images/ted/ted7.webp",
+    "images/ted/ted8.webp",
+    "images/ted/ted9.webp",
+
+    // Add all variation image paths here
+  ],
+
+
+      "Disney Stitch Little Emotion Series":  [
+    "images/stitch/stitch1.webp",
+    "images/stitch/stitch2.webp",
+    "images/stitch/stitch3.webp",
+    "images/stitch/stitch4.webp",
+    "images/stitch/stitch5.webp",
+    "images/stitch/stitch6.webp",
+    "images/stitch/stitch7.webp",
+    "images/stitch/stitch8.webp",
+    "images/stitch/stitch9.webp",
+    "images/stitch/stitch10.webp",
+        "images/stitch/stitch11.webp",
+
+
+    // Add all variation image paths here
+  ],
+
+
+    "CRYBABY Crying For x Love Series Figure":  [
+    "images/crying/crying1.webp",
+    "images/crying/crying2.webp",
+    "images/crying/crying3.webp",
+    "images/crying/crying4.webp",
+    "images/crying/crying5.webp",
+    "images/crying/crying6.webp",
+    "images/crying/crying7.webp",
+    "images/crying/crying8.webp",
+    "images/crying/crying9.webp",
+    "images/crying/crying10.webp",
+    "images/crying/crying11.webp",
+
+
+    // Add all variation image paths here
+  ],
+
+  "We are Twinkle Series-Plush Pendant Blind Box":  [
+    "images/twinkle/twinkle1.webp",
+    "images/twinkle/twinkle2.webp",
+    "images/twinkle/twinkle3.webp",
+    "images/twinkle/twinkle4.webp",
+    "images/twinkle/twinkle5.webp",
+    "images/twinkle/twinkle6.webp",
+    "images/twinkle/twinkle7.webp",
+    "images/twinkle/twinkle8.webp",
+    "images/twinkle/twinkle9.webp",
+    "images/twinkle/twinkle10.webp",
+    "images/twinkle/twinkle11.webp",
+  ]
+};
+function viewPopNow(el) {
+  const img = el.querySelector('img').getAttribute('src');
+  const brandElem = el.querySelector('.brand');
+  let brand = brandElem ? brandElem.innerHTML.replace(/<br\s*\/?>/gi, ' ').replace(/\s+/g, ' ').trim() : '';
+  const price = el.querySelector('.price').innerText;
+
+  // Use mapping or fallback to main image
+  const variations = popNowVariations[brand] || [img];
+
+  localStorage.setItem('productVariations', JSON.stringify(variations));
+  localStorage.setItem('productImg', img);
+  localStorage.setItem('productBrand', brand);
+  localStorage.setItem('productName', brand);
+  localStorage.setItem('productPrice', price);
+  window.location.href = 'product-info2.html';
+}
+</script>
+
+<!--ALL PRODUCTS SCRIPT -->
+<script>
+
+  const allProductsVariations = {
+  "DIMOO Crush on Coffee Series-Soft-Faced Plush Keychain Blind Box": [
+    "images/dimooCoffee/coffee1.webp",
+    "images/dimooCoffee/coffee3.webp",
+    "images/dimooCoffee/coffee4.webp",
+    "images/dimooCoffee/coffee5.webp",
+    "images/dimooCoffee/coffee6.webp"
+    // Add all variation image paths here
+  ],
+  // Add more Pop Now products as needed
+   "THE MONSTERS Wacky Mart Series-Pillow(Chips)": [
+    "images/monster_pillow/pillow1.webp",
+    "images/monster_pillow/pillow2.webp",
+    "images/monster_pillow/pillow3.webp",
+    "images/monster_pillow/pillow4.webp",
+    "images/monster_pillow/pillow5.webp",
+    "images/monster_pillow/pillow6.webp"
+    // Add all variation image paths here
+  ],
+
+    "THE MONSTER Let's Checkmate Series-Vinyl Plush Doll":  [
+    "images/checkmate/checkmate1.webp",
+    "images/checkmate/checkmate2.webp",
+    "images/checkmate/checkmate3.webp",
+    "images/checkmate/checkmate4.webp",
+    "images/checkmate/checkmate5.webp",
+    "images/checkmate/checkmate6.webp",
+    "images/checkmate/checkmate7.webp",
+    "images/checkmate/checkmate8.webp",
+ 
+
+    // Add all variation image paths here
+  ],
+
+
+      "THE MONSTER Let's Checkmate Series-Vinyl Plush Hanging Card":  [
+    "images/hanging_card/hanging_card1.webp",
+    "images/hanging_card/hanging_card2.webp",
+    "images/hanging_card/hanging_card3.webp",
+    "images/hanging_card/hanging_card4.webp",
+    "images/hanging_card/hanging_card5.webp",
+    "images/hanging_card/hanging_card6.webp",
+    "images/hanging_card/hanging_card7.webp",
+
+
+
+    // Add all variation image paths here
+  ],
+
+
+    "MEGA LABUBU 400% Sketch":  [
+    "images/sketch/sketch1.webp",
+    "images/sketch/sketch2.webp",
+    "images/sketch/sketch3.webp",
+    "images/sketch/sketch4.webp",
+    "images/sketch/sketch5.webp",
+    "images/sketch/sketch6.webp",
+ 
+
+
+    // Add all variation image paths here
+  ],
+
+
+     "LABUBU Summer Ride Figure":  [
+    "images/summer_ride/summeride1.webp",
+    "images/summer_ride/summeride2.webp",
+    "images/summer_ride/summeride3.webp",
+    "images/summer_ride/summeride4.webp",
+    "images/summer_ride/summeride5.webp",
+    "images/summer_ride/summeride6.webp",
+    "images/summer_ride/summeride7.webp",
+
+ 
+
+
+    // Add all variation image paths here
+  ],
+
+     "LABUBU x PRONOUNCE - WINGS OF FANTASY Vinyl Plush Doll":  [
+    "images/winger/winger1.webp",
+    "images/winger/winger2.webp",
+    "images/winger/winger3.webp",
+    "images/winger/winger4.webp",
+    "images/winger/winger5.webp",
+    "images/winger/winger6.webp",
+    "images/winger/winger7.webp",
+
+
+    // Add all variation image paths here
+  ],
+
+
+  "THE MONSTERS - Exciting Macaron Vinyl Face Blind Box": [
+    "images/exciting/exciting1.webp",
+    "images/exciting/exciting2.webp",
+    "images/exciting/exciting3.webp",
+    "images/exciting/exciting4.webp",
+    "images/exciting/exciting5.webp",
+    "images/exciting/exciting6.webp"
+  ],
+
+  "Lazy Yoga Series Figures": [
+    "images/lazy/lazy1.webp",
+    "images/lazy/lazy2.webp",
+    "images/lazy/lazy3.webp",
+    "images/lazy/lazy4.webp",
+    "images/lazy/lazy5.webp",
+    "images/lazy/lazy6.webp",
+    "images/lazy/lazy7.webp",
+    "images/lazy/lazy8.webp"
+  ],
+
+    "LABUBU Rhythmic gymnatics Figure": [
+    "images/gym/gym1.webp",
+    "images/gym/gym2.webp",
+    "images/gym/gym3.webp",
+    "images/gym/gym4.webp",
+    "images/gym/gym5.webp",
+    "images/gym/gym6.webp",
+  ],
+
+
+      "Happy Halloween Party Series- LABUBU Canvas Bag": [
+    "images/happybag/happybag1.webp",
+    "images/happybag/happybag2.webp",
+    "images/happybag/happybag3.webp",
+    "images/happybag/happybag4.webp",
+    "images/happybag/happybag5.webp",
+    "images/happybag/happybag6.webp",
+  ],
+
+        "THE MONSTER FALL IN WILD SERIES-Vinyl Plush Doll": [
+    "images/wild/wild1.webp",
+    "images/wild/wild2.webp",
+    "images/wild/wild3.webp",
+    "images/wild/wild4.webp",
+   
+  ],
+
+  "THE MONSTER - DRESS BE LATTE Vinyl Plush Doll": [
+    "images/dress/dress1.webp",
+    "images/dress/dress2.webp",
+    "images/dress/dress3.webp",
+    "images/dress/dress4.webp",
+  ]
+
+};
+function viewProduct(el) {
+  const img = el.querySelector('img').getAttribute('src');
+  const brandElem = el.querySelector('.brand');
+  let brand = brandElem ? brandElem.innerHTML.replace(/<br\s*\/?>/gi, ' ').replace(/\s+/g, ' ').trim() : '';
+  const price = el.querySelector('.price').innerText;
+
+  // Use mapping or fallback to main image
+  const variations = allProductsVariations[brand] || [img];
+
+  localStorage.setItem('productVariations', JSON.stringify(variations));
+  localStorage.setItem('productImg', img);
+  localStorage.setItem('productBrand', brand);
+  localStorage.setItem('productName', brand);
+  localStorage.setItem('productPrice', price);
+  window.location.href = 'product-info2.html';
+}
+</script>
+
+
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+hamburger.addEventListener('click', function() {
+  mobileMenu.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevent background scroll
+});
+closeMobileMenu.addEventListener('click', function() {
+  mobileMenu.classList.remove('active');
+  document.body.style.overflow = ''; // Restore scroll
+});
+</script>
+
+
+
+<script>
+
+  const hotProductsVariations = {
+  "SKULLPANDA L'impressionnisme Series Plush Doll": [
+    "images/skullpanda/skullpanda1.webp",
+    "images/skullpanda/skullpanda2.webp",
+    "images/dimooCoffee/coffee4.webp",
+    "images/dimooCoffee/coffee5.webp",
+    "images/dimooCoffee/coffee6.webp"
+    // Add all variation image paths here
+  ],
+  // Add more Pop Now products as needed
+   
+
+     "DIMOO WORLD x DISNEY Series-Vinyl Keychain":  [
+    "images/dimoo/dimoo1.webp",
+    "images/dimoo/dimoo2.webp",
+    "images/dimoo/dimoo3.webp",
+    "images/dimoo/dimoo4.webp",
+    "images/dimoo/dimoo5.webp",
+    "images/dimoo/dimoo6.webp",
+    "images/dimoo/dimoo7.webp",
+
+    // Add all variation image paths here
+  ],
+
+  "THE MONSTER Big into Energy Vinyl Series": [
+    "images/bigenergy/bigenergy1.webp",
+    "images/bigenergy/bigenergy2.webp",
+    "images/bigenergy/bigenergy3.webp",
+    "images/bigenergy/bigenergy4.webp",
+    "images/bigenergy/bigenergy5.webp",
+    "images/bigenergy/bigenergy6.webp",
+    "images/bigenergy/bigenergy7.webp",
+    "images/bigenergy/bigenergy8.webp",
+    "images/bigenergy/bigenergy9.webp",
+
+  ],
+
+  "Baby Molly Pocket Friendly Series-Vinyl": [
+    "images/babyMolly/babymolly1.webp",
+    "images/babyMolly/babymolly2.webp",
+    "images/babyMolly/babymolly3.webp",
+    "images/babyMolly/babymolly4.webp",
+    "images/babyMolly/babymolly5.webp",
+    "images/babyMolly/babymolly6.webp",
+    "images/babyMolly/babymolly7.webp",
+  ],
+
+  "PUCKY Forest Party Series-Vinyl Pendant": [
+    "images/forest/forest1.webp",
+    "images/forest/forest2.webp",
+    "images/forest/forest3.webp",
+    "images/forest/forest4.webp",
+    "images/forest/forest5.webp",
+    "images/forest/forest6.webp",
+    "images/forest/forest7.webp",
+    "images/forest/forest8.webp",
+    "images/forest/forest9.webp",
+     "images/forest/forest10.webp",
+  ],
+
+    "0SKULLPANDA Winter Symphony Series Plush": [
+    "images/winter/winter1.webp",
+    "images/winter/winter2.webp",
+    "images/winter/winter3.webp",
+    "images/winter/winter4.webp",
+    "images/winter/winter5.webp",
+    "images/winter/winter6.webp",
+    "images/winter/winter7.webp",
+  
+  ],
+
+
+
+
+
+
+
+
+};
+function viewHotProduct(el) {
+  const img = el.querySelector('img').getAttribute('src');
+  const brandElem = el.querySelector('.brand');
+  let brand = brandElem ? brandElem.innerHTML.replace(/<br\s*\/?>/gi, ' ').replace(/\s+/g, ' ').trim() : '';
+  const price = el.querySelector('.price').innerText;
+
+  // Use mapping or fallback to main image
+  const variations3 = hotProductsVariations[brand] || [img];
+
+  localStorage.setItem('productVariations', JSON.stringify(variations3));
+  localStorage.setItem('productImg', img);
+  localStorage.setItem('productBrand', brand);
+  localStorage.setItem('productName', brand);
+  localStorage.setItem('productPrice', price);
+  window.location.href = 'product-info2.html';
+}
+</script>
+
+</body>
+</html>
+
 
