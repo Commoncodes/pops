@@ -272,7 +272,11 @@
   <div class="modal-content">
     <h3>Send Bitcoin Payment</h3>
     <p>Wallet Address:</p>
-    <div class="wallet-address">xxxxxxxxxxxxxxxxxxx</div>
+    <div class="wallet-address" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+  <span id="wallet-address-text">bc1qzcg7dlhh5s8jl9t0c5jjafwzsmmnde5kzgqv02</span>
+  <img id="copy-wallet-btn" src="images/copy.png" alt="Copy" style="width:20px;cursor:pointer;" title="Copy address">
+  <span id="copy-status" style="font-size: 0.9rem; color: #4caf50; margin-left: 6px; display: none;">Copied!</span>
+</div>
    <div style="display: flex; flex-direction: column; align-items: center; margin: 1.5rem 0 0.5rem 0;">
   <div class="circle-timer">
     <svg id="progress-ring" width="100" height="100">
@@ -505,6 +509,15 @@ document.getElementById('payment-sent-btn').addEventListener('click', function()
     }
   }
   updateTimer();
+});
+
+document.getElementById('copy-wallet-btn').addEventListener('click', function() {
+  const walletText = document.getElementById('wallet-address-text').textContent;
+  navigator.clipboard.writeText(walletText).then(function() {
+    const status = document.getElementById('copy-status');
+    status.style.display = 'inline';
+    setTimeout(() => { status.style.display = 'none'; }, 1500);
+  });
 });
 </script>
 </body>
